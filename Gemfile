@@ -34,7 +34,10 @@ gem 'unicorn'
 
 gem 'materialize-sass'
 
+gem 'omniauth'
+gem 'omniauth-facebook'
 
+gem 'figaro'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -47,4 +50,6 @@ group :development, :test do
   gem 'spring'
 
   gem 'rspec-rails', '~> 3.0'
+
+  gem 'pry'
 end
