@@ -1,13 +1,10 @@
-<nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">BurritoFinder</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li>Signed in as <%= current_user.name  %></li>
-        <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
-      </ul>
-    </div>
-  </nav>
+
+  <%= render :partial => 'partials/navbar' %>
+
 
 <div class="page">
-  <h1>You are on the Maps page.</h1>
+
+  <div id="map">
+
+  </div>
 </div>
