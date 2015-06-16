@@ -1,0 +1,13 @@
+<%= render :partial => 'partials/navbar' %>
+<div class="favorites">
+  <div class="favorite-burritos">
+    <h2>Favorite Burritos</h1>
+  </div>
+
+  <% @burritos.each do |burrito|  %>
+  <div class="each-favorite-burrito">
+    <h4><%= burrito[:name] %></h4>
+    <p><%= burrito[:location] %></p>
+  </div>
+  <% end %>
+</div>

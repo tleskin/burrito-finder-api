@@ -102,16 +102,16 @@ text-shadow:
 
 
 .navbar {
-   background: #3b5998;
+   background: #3b5998 !important;
 
 }
 
 
 .nav.navbar-nav.navbar-right li a {
-    color: white;
+    color: white !important;
     /* WebKit (Safari/Chrome) Only */
     -webkit-text-stroke: .5px black;
-    background: #3b5998;
+    background: #3b5998 !important;
 }
 
 .nav.navbar-nav.navbar-left li a {
@@ -119,38 +119,7 @@ text-shadow:
 }
 
 .nav.navbar-nav li a {
-  color: white;
+  color: white !important;
   /* WebKit (Safari/Chrome) Only */
   -webkit-text-stroke: .5px black;
-}
-
-.favorite-burritos {
-  font-family: Roboto;
-  background: #3b5998;
-  color: white;
-  text-align: center;
-  border-radius:5px;
-  margin-bottom: 5px;
-  display: block;
-  text-align: center;
-  margin: 400px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-bottom: 50px;
-  padding: 50px 50px 50px 50px;
-}
-
-.each-favorite-burrito {
-  font-family: Roboto;
-  background: #3b5998;
-  color: white;
-  text-align: center;
-  border-radius:5px;
-  margin-bottom: 5px;
-  display: block;
-  text-align: center;
-  margin: 400px;
-  margin-top: 50px;
-  margin-bottom: 0px;
-  padding: 50px 50px 50px 50px;
 }
