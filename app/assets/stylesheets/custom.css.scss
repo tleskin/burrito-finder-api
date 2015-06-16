@@ -43,7 +43,7 @@ h1 {
 
 .header {
   font-family: 'Roboto';
-  font-size: 75px;
+  font-size: 100px;
   text-align: center;
   /* WebKit (Safari/Chrome) Only */
   -webkit-text-stroke: 1px black;
@@ -100,7 +100,26 @@ text-shadow:
   background-size: cover;
 }
 
-.navbar-default {
-  background-color: #3b5998;
-  border-color: #030033;
+
+.navbar {
+   background: #3b5998 !important;
+
+}
+
+
+.nav.navbar-nav.navbar-right li a {
+    color: white !important;
+    /* WebKit (Safari/Chrome) Only */
+    -webkit-text-stroke: .5px black;
+    background: #3b5998 !important;
+}
+
+.nav.navbar-nav.navbar-left li a {
+    color: #777;
+}
+
+.nav.navbar-nav li a {
+  color: white !important;
+  /* WebKit (Safari/Chrome) Only */
+  -webkit-text-stroke: .5px black;
 }
