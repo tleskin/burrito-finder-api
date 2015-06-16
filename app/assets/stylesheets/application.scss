@@ -14,4 +14,7 @@
  *= require_self
  */
 
- @import "materialize";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('//fonts.googleapis.com/css?family=PT Sans');
+@import url('//fonts.googleapis.com/css?family=Roboto');
