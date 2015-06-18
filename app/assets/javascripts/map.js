@@ -2,10 +2,11 @@ $(document).ready(function(){
 
   L.mapbox.accessToken = 'pk.eyJ1IjoidGxlc2tpbiIsImEiOiI1MTIyOTVkYWIwODNlMjM3ZmI1NzNjOWYyNjM5OWIzOCJ9.jRUuyE7bubZRpeh2TEjreg'
 
-  var geolocate = document.getElementById('geolocate');
-  var map = L.mapbox.map('map', 'tleskin.mf90jh31')
-  var start = [ 39.749964, -105.000012 ]
-  var myLayer = L.mapbox.featureLayer().addTo(map);
+  // Setup modules
+  var geolocate = document.getElementById('geolocate'),
+      map       = L.mapbox.map('map', 'tleskin.mf90jh31'),
+      start     = [ 39.749964, -105.000012 ],
+      myLayer   = L.mapbox.featureLayer().addTo(map);
 
   // Set starting marker
   var marker = L.marker(start, {
@@ -16,14 +17,18 @@ $(document).ready(function(){
     })
   }).addTo(map);
 
+  // Add Tag to Starting Point
   marker.bindPopup("<b>BurritoFinder HQ</b>").closePopup();
 
+  // Set Starting Point on Map
   map.setView(start, 15)
 
+  // When Geolocate div is hit, activate spinner
   $("#geolocate").click(function(){
      $("#spinner").toggleClass("hidden");
    })
 
+  // If no location found, tell you, otherwise, put that point on map
   if (!navigator.geolocation) {
       geolocate.innerHTML = 'Geolocation is not available';
   } else {
@@ -54,6 +59,7 @@ $(document).ready(function(){
           }
       });
 
+      //
       $.post("/burritos", {lat: e.latitude, lon: e.longitude}).then(function(burritos){
 
         $("#spinner").toggleClass("hidden");
@@ -79,15 +85,27 @@ $(document).ready(function(){
 
           });
 
-          $("#burritos").addClass("parks")
-           $("#map").removeClass("big-map").addClass("small-map");
+          //  $("#map").removeClass("big-map").addClass("small-map");
              var burritoLayer = map.featureLayer.setGeoJSON(myBurritos);
              map.fitBounds(burritoLayer.getBounds());
 
+             // Create Div For Burrito Layer
+             var $burritoDiv = $("#burritos");
+
+             $("#burritos").addClass("burritos")
+             $burritoDiv.empty();
+             $burritoDiv.append(burritos.map(function(burrito){
+               return $( "<h3>" + burrito.table.name + "</h3>" +
+               "<p>" + burrito.table.address + "</p>" +
+               "<p>" + burrito.table.city + "</p>"+
+               "<p>" + burrito.table.state + "</p>" +
+               "<p>" + burrito.table.zip + "</p>" +
+               "<p>" + burrito.table.country + "</p>" +
+               "<p> -------------</p>");
+                }));
+
         });
       });
-      // And hide the geolocation button
-      geolocate.parentNode.removeChild(geolocate);
   });
 
 
