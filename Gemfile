@@ -14,7 +14,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'figaro'
 gem 'yelp', require: 'yelp'
-
+gem 'responders'
 
 group :development, :test do
   gem 'capybara'

@@ -123,3 +123,11 @@ text-shadow:
   /* WebKit (Safari/Chrome) Only */
   -webkit-text-stroke: .5px black;
 }
+
+#spinner {
+  position: absolute;
+  // margin-bottom: 200px;
+  margin-top: 100px;
+  margin-left: 450px;
+  z-index: 1;
+}
