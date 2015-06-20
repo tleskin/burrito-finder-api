@@ -16,6 +16,7 @@ gem 'figaro'
 gem 'yelp', require: 'yelp'
 gem 'responders'
 gem 'newrelic_rpm'
+gem "skylight"
 
 group :development, :test do
   gem 'capybara'
