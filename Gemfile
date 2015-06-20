@@ -15,6 +15,7 @@ gem 'omniauth-facebook'
 gem 'figaro'
 gem 'yelp', require: 'yelp'
 gem 'responders'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'capybara'

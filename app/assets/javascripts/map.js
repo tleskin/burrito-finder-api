@@ -43,7 +43,7 @@ $(document).ready(function(){
   // Once we've got a position, zoom and center the map
   // on it, and add a single marker.
   map.on('locationfound', function(e) {
-      map.fitBounds(e.bounds);
+      // map.fitBounds(e.bounds);
 
       myLayer.setGeoJSON({
           type: 'Feature',
@@ -87,6 +87,7 @@ $(document).ready(function(){
 
           //  $("#map").removeClass("big-map").addClass("small-map");
              var burritoLayer = map.featureLayer.setGeoJSON(myBurritos);
+             debugger;
              map.fitBounds(burritoLayer.getBounds());
 
              // Create Div For Burrito Layer
