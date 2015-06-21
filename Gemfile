@@ -17,6 +17,9 @@ gem 'yelp', require: 'yelp'
 gem 'responders'
 gem 'newrelic_rpm'
 gem "skylight"
+gem "teaspoon"
+gem "teaspoon-mocha"
+gem "phantomjs"
 
 group :development, :test do
   gem 'capybara'
