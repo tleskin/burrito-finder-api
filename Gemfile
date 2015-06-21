@@ -24,6 +24,11 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
   gem 'pry'
+  gem 'vcr'
+  gem 'webmock'
+  gem 'simplecov'
+  gem 'launchy'
+  gem 'database_cleaner'
 end
 
 group :production do

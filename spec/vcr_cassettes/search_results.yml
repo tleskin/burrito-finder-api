@@ -1,0 +1,359 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.yelp.com/v2/search?ll=40.061394,-105.210401,,,&term=burrito
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Authorization:
+      - OAuth oauth_consumer_key="ae68O8R7F20O_RULNb8p4A", oauth_nonce="92cc9e35bb4a77e90101a169aaa2d1c6",
+        oauth_signature="D1eB3qcm1QZVCirCkDCkP67wzJE%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1434845762", oauth_token="la6wHLlWwsgNKIhMvoDspu5S46SS4X-a",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 21 Jun 2015 00:15:58 GMT
+      Server:
+      - Apache
+      X-Node:
+      - web44-uswest1bprod, api_com
+      Cache-Control:
+      - private
+      Set-Cookie:
+      - bse=5c7db66529a9a16c229e0a813c03bc29; Domain=.yelp.com; Path=/; HttpOnly
+      - yuv=VdhpxW2LIpHeUzQJwhpuuvFZI_dJsRuFfi7dAK6K72ZTT_IsHMC78u34WMUxhTx1aTK_aouJswMc4ixxFBYYVnoqbtPk2q1B;
+        Domain=.yelp.com; Max-Age=630720000; Path=/; expires=Sat, 16-Jun-2035 00:15:58
+        GMT
+      Vary:
+      - Accept-Encoding,User-Agent
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Mode:
+      - ro
+      X-Proxied:
+      - extlb1-uswest1aprod
+    body:
+      encoding: ASCII-8BIT
+      string: '{"region": {"span": {"latitude_delta": 0.11201597000000163, "longitude_delta":
+        0.12908071000001087}, "center": {"latitude": 40.05070835, "longitude": -105.22589285000001}},
+        "total": 101, "businesses": [{"is_claimed": true, "distance": 5269.706443435504,
+        "mobile_url": "http://m.yelp.com/biz/verde-boulder-3", "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 48, "name": "Verde", "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/mW7dbCR8qM4rJxxGnf5oTg/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/verde-boulder-3", "location":
+        {"city": "Boulder", "display_address": ["3070 28th St", "Ste B", "Boulder,
+        CO 80301"], "geo_accuracy": 8.0, "postal_code": "80301", "country_code": "US",
+        "address": ["3070 28th St", "Ste B"], "coordinate": {"latitude": 40.0310287,
+        "longitude": -105.2577515}, "state_code": "CO"}, "menu_date_updated": 1430716189,
+        "phone": "7204704348", "snippet_text": "Finally tried Verde and will definitely
+        be back! Our (darling) waiter was great and the food was fresh and yum! Good
+        Mexican food in Boulder....who...", "image_url": "http://s3-media2.fl.yelpcdn.com/bphoto/8PSG8c95pNJprk9YOQiY4Q/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-720-470-4348",
+        "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "menu_provider": "single_platform", "id": "verde-boulder-3", "is_closed":
+        false, "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": true, "distance": 5130.071427239712, "mobile_url": "http://m.yelp.com/biz/efrains-mexican-restaurant-boulder",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 199, "name": "Efrain''s Mexican Restaurant", "snippet_image_url":
+        "http://s3-media2.fl.yelpcdn.com/photo/lFkR47p1MAk7b3r_9_ZBwQ/ms.jpg", "rating":
+        4.0, "url": "http://www.yelp.com/biz/efrains-mexican-restaurant-boulder",
+        "location": {"city": "Boulder", "display_address": ["1630 63rd St", "Ste 10",
+        "Boulder, CO 80301"], "geo_accuracy": 9.5, "postal_code": "80301", "country_code":
+        "US", "address": ["1630 63rd St", "Ste 10"], "coordinate": {"latitude": 40.0153822889383,
+        "longitude": -105.205983565509}, "state_code": "CO"}, "menu_date_updated":
+        1402380881, "phone": "3034404045", "snippet_text": "FINALLY I''ve discovered
+        some Mexican food that is worthy of the SoCal pallet in Boulder. I told my
+        waiter it was my first time here and he gave me some pork...", "image_url":
+        "http://s3-media2.fl.yelpcdn.com/bphoto/a3bE-wernANjITsqV8aDWQ/ms.jpg", "categories":
+        [["Mexican", "mexican"]], "display_phone": "+1-303-440-4045", "rating_img_url_large":
+        "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "menu_provider": "single_platform", "id": "efrains-mexican-restaurant-boulder",
+        "is_closed": false, "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": true, "distance": 6178.734308915969, "mobile_url": "http://m.yelp.com/biz/la-choza-boulder",
+        "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+        "review_count": 52, "name": "La Choza", "snippet_image_url": "http://s3-media2.fl.yelpcdn.com/photo/oMjiP7JG8DvOl3hG-bHsng/ms.jpg",
+        "rating": 4.5, "url": "http://www.yelp.com/biz/la-choza-boulder", "location":
+        {"city": "Boulder", "display_address": ["4457 Broadway St", "Boulder, CO 80301"],
+        "geo_accuracy": 9.5, "postal_code": "80301", "country_code": "US", "address":
+        ["4457 Broadway St"], "coordinate": {"latitude": 40.0555650893728, "longitude":
+        -105.282599839954}, "state_code": "CO"}, "phone": "3034433103", "snippet_text":
+        "I recently stayed in Boulder for 4 days and found myself at La Choza 3 times.
+        The only reason it wasn''t 4 times was because one day the friend I was staying...",
+        "image_url": "http://s3-media4.fl.yelpcdn.com/bphoto/_jdFVVSjMay5T8DyXig2ug/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-303-443-3103",
+        "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+        "id": "la-choza-boulder", "is_closed": false, "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png"},
+        {"is_claimed": true, "distance": 5495.068925471154, "mobile_url": "http://m.yelp.com/biz/picas-taqueria-boulder",
+        "rating_img_url": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png",
+        "review_count": 104, "name": "Pica''s Taqueria", "snippet_image_url": "http://s3-media2.fl.yelpcdn.com/photo/DJ1O7QQG0hTGpUwFKuz6_w/ms.jpg",
+        "rating": 3.5, "url": "http://www.yelp.com/biz/picas-taqueria-boulder", "location":
+        {"city": "Boulder", "display_address": ["5360 Arapahoe Ave", "Ste F", "Boulder,
+        CO 80303"], "geo_accuracy": 8.0, "postal_code": "80303", "country_code": "US",
+        "address": ["5360 Arapahoe Ave", "Ste F"], "coordinate": {"latitude": 40.013924,
+        "longitude": -105.227898}, "state_code": "CO"}, "phone": "3034442391", "snippet_text":
+        "I feel like an idiot. I have been getting my coffee from Ozo virtually next
+        door and never tried Pica''s until today. \n\nI thought it would be yet another...",
+        "image_url": "http://s3-media3.fl.yelpcdn.com/bphoto/_dD7MjLKiSx5cH0E_25qog/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-303-444-2391",
+        "rating_img_url_large": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
+        "id": "picas-taqueria-boulder", "is_closed": false, "rating_img_url_small":
+        "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/2e909d5d3536/ico/stars/v1/stars_small_3_half.png"},
+        {"is_claimed": false, "distance": 6841.693532533824, "mobile_url": "http://m.yelp.com/biz/big-city-burrito-boulder",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 64, "name": "Big City Burrito", "snippet_image_url": "http://s3-media2.fl.yelpcdn.com/photo/5Yh2fu_fuNr3xdrNHUqw1w/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/big-city-burrito-boulder",
+        "location": {"city": "Boulder", "display_address": ["2426 Arapahoe Ave", "Boulder,
+        CO 80302"], "geo_accuracy": 8.0, "postal_code": "80302", "country_code": "US",
+        "address": ["2426 Arapahoe Ave"], "coordinate": {"latitude": 40.0145258009434,
+        "longitude": -105.262675881386}, "state_code": "CO"}, "phone": "7205652489",
+        "snippet_text": "I like businesses that stick to what they know. Their strong
+        points are fried, crispy potatoes in their burritos, cookies, amazing carne
+        asada, and \"nacho\"...", "image_url": "http://s3-media2.fl.yelpcdn.com/bphoto/cndgUzmlZWO7bvsrBeSY7g/ms.jpg",
+        "categories": [["Mexican", "mexican"], ["Tex-Mex", "tex-mex"], ["Vegetarian",
+        "vegetarian"]], "display_phone": "+1-720-565-2489", "rating_img_url_large":
+        "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "id": "big-city-burrito-boulder", "is_closed": false, "rating_img_url_small":
+        "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": true, "distance": 4897.814445653411, "mobile_url": "http://m.yelp.com/biz/sanchos-authentic-mexican-restaurant-boulder",
+        "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+        "review_count": 23, "name": "Sancho''s Authentic Mexican Restaurant", "snippet_image_url":
+        "http://s3-media3.fl.yelpcdn.com/photo/tRr99xmFBD4DJQRUAKxbLg/ms.jpg", "rating":
+        4.5, "url": "http://www.yelp.com/biz/sanchos-authentic-mexican-restaurant-boulder",
+        "location": {"city": "Boulder", "display_address": ["2850 Iris Ave", "Ste
+        H", "Boulder, CO 80301"], "geo_accuracy": 8.0, "postal_code": "80301", "country_code":
+        "US", "address": ["2850 Iris Ave", "Ste H"], "coordinate": {"latitude": 40.0356254577637,
+        "longitude": -105.256278991699}, "state_code": "CO"}, "phone": "3034400228",
+        "snippet_text": "Hidden gem! I almost don''t want to review it to keep it
+        in obscurity but the food is so damn good everybody needs to know! Yea we
+        have chain Mexican...", "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/QOmm17gqmUf5wvSUrL-G_g/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-303-440-0228",
+        "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+        "id": "sanchos-authentic-mexican-restaurant-boulder", "is_closed": false,
+        "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png"},
+        {"is_claimed": false, "distance": 5190.6297181997925, "mobile_url": "http://m.yelp.com/biz/rancho-grande-boulder",
+        "rating_img_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/34bc8086841c/ico/stars/v1/stars_3.png",
+        "review_count": 15, "name": "Rancho Grande", "snippet_image_url": "http://s3-media4.fl.yelpcdn.com/assets/srv0/yelp_styleguide/cc4afe21892e/assets/img/default_avatars/user_medium_square.png",
+        "rating": 3.0, "url": "http://www.yelp.com/biz/rancho-grande-boulder", "location":
+        {"city": "Boulder", "display_address": ["2966 Valmont Rd", "Boulder, CO 80301"],
+        "geo_accuracy": 9.5, "postal_code": "80301", "country_code": "US", "address":
+        ["2966 Valmont Rd"], "coordinate": {"latitude": 40.0291574, "longitude": -105.2545033},
+        "state_code": "CO"}, "menu_date_updated": 1409032851, "phone": "3034421266",
+        "snippet_text": "This is a hole-in-the-wall restaurant with delicious authentic
+        Mexican food. The outside looks shitty, yes, but the food is awesome.", "image_url":
+        "http://s3-media4.fl.yelpcdn.com/bphoto/d42iL4suHZyNtcTWlMYLLw/ms.jpg", "categories":
+        [["Mexican", "mexican"]], "display_phone": "+1-303-442-1266", "rating_img_url_large":
+        "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/e8b5b79d37ed/ico/stars/v1/stars_large_3.png",
+        "menu_provider": "single_platform", "id": "rancho-grande-boulder", "is_closed":
+        false, "rating_img_url_small": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/902abeed0983/ico/stars/v1/stars_small_3.png"},
+        {"is_claimed": false, "distance": 6103.850424405858, "mobile_url": "http://m.yelp.com/biz/pupusas-sabor-hispano-boulder",
+        "rating_img_url": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png",
+        "review_count": 108, "name": "Pupusas Sabor Hispano", "snippet_image_url":
+        "http://s3-media2.fl.yelpcdn.com/photo/KCxMG8pwItJcUIESE9G0tg/ms.jpg", "rating":
+        3.5, "url": "http://www.yelp.com/biz/pupusas-sabor-hispano-boulder", "location":
+        {"city": "Boulder", "display_address": ["4550 N Broadway St", "Boulder, CO
+        80304"], "geo_accuracy": 8.0, "postal_code": "80304", "country_code": "US",
+        "address": ["4550 N Broadway St"], "coordinate": {"latitude": 40.057281, "longitude":
+        -105.281876}, "state_code": "CO"}, "phone": "3034441729", "snippet_text":
+        "I had the chicken and cheese pupusa for lunch and it was delicious.  I like
+        their salsa bar which has some interesting flavors (I think one of the salsas
+        is...", "image_url": "http://s3-media2.fl.yelpcdn.com/bphoto/z6_xA4s9FZ9q0nS7SEZBHw/ms.jpg",
+        "categories": [["Mexican", "mexican"], ["Salvadoran", "salvadoran"]], "display_phone":
+        "+1-303-444-1729", "rating_img_url_large": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
+        "id": "pupusas-sabor-hispano-boulder", "is_closed": false, "rating_img_url_small":
+        "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/2e909d5d3536/ico/stars/v1/stars_small_3_half.png"},
+        {"is_claimed": true, "distance": 6017.363739695414, "mobile_url": "http://m.yelp.com/biz/wahoos-fish-tacos-boulder",
+        "rating_img_url": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png",
+        "review_count": 63, "name": "Wahoo''s Fish Tacos", "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/Cnp_iNxWO5yB3qqedma_9Q/ms.jpg",
+        "rating": 3.5, "url": "http://www.yelp.com/biz/wahoos-fish-tacos-boulder",
+        "location": {"city": "Boulder", "display_address": ["2790 Pearl St.", "Boulder,
+        CO 80301"], "geo_accuracy": 8.0, "postal_code": "80301", "country_code": "US",
+        "address": ["2790 Pearl St."], "coordinate": {"latitude": 40.0220528, "longitude":
+        -105.2591171}, "state_code": "CO"}, "menu_date_updated": 1387942446, "phone":
+        "3034739072", "snippet_text": "Wow, finally a taco joint that knows what they
+        are doing. Really cool patio and dining area. Try the Cajun Wahoo Taco. You
+        won''t be disappointed!", "image_url": "http://s3-media4.fl.yelpcdn.com/bphoto/o_rhTjZAaTKXhe3OffJ02w/ms.jpg",
+        "categories": [["Mexican", "mexican"], ["Seafood", "seafood"]], "display_phone":
+        "+1-303-473-9072", "rating_img_url_large": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
+        "menu_provider": "single_platform", "id": "wahoos-fish-tacos-boulder", "is_closed":
+        false, "rating_img_url_small": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/2e909d5d3536/ico/stars/v1/stars_small_3_half.png"},
+        {"is_claimed": true, "distance": 5510.645775025249, "mobile_url": "http://m.yelp.com/biz/agave-mexico-bistro-and-tequila-house-boulder",
+        "rating_img_url": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png",
+        "review_count": 139, "name": "Agave Mexico Bistro \u0026 Tequila House", "snippet_image_url":
+        "http://s3-media2.fl.yelpcdn.com/photo/CLLSQ0azw8P7t5beurARpw/ms.jpg", "rating":
+        3.5, "url": "http://www.yelp.com/biz/agave-mexico-bistro-and-tequila-house-boulder",
+        "location": {"city": "Boulder", "display_address": ["2845 28th St", "Boulder,
+        CO 80301"], "geo_accuracy": 8.0, "postal_code": "80301", "country_code": "US",
+        "address": ["2845 28th St"], "coordinate": {"latitude": 40.0284157, "longitude":
+        -105.2585373}, "state_code": "CO"}, "phone": "3034442922", "snippet_text":
+        "Cancun Molcajete, and a coin margarita. That''s all there is to it. Phenomenal,
+        but be ready to eat a _lot_ of food, or take some home. Seriously one of the...",
+        "image_url": "http://s3-media2.fl.yelpcdn.com/bphoto/-hqOlf7QbgFLAUZOiToEfQ/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-303-444-2922",
+        "rating_img_url_large": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
+        "id": "agave-mexico-bistro-and-tequila-house-boulder", "is_closed": false,
+        "rating_img_url_small": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/2e909d5d3536/ico/stars/v1/stars_small_3_half.png"},
+        {"is_claimed": true, "distance": 6885.562021680913, "mobile_url": "http://m.yelp.com/biz/wapos-boulder-2",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 32, "name": "Wapos", "snippet_image_url": "http://s3-media4.fl.yelpcdn.com/photo/zADUvL2x2ZcPPs7UWmU9nQ/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/wapos-boulder-2", "location":
+        {"city": "Boulder", "display_address": ["4929 N Broadway", "Boulder, CO 80304"],
+        "geo_accuracy": 6.0, "postal_code": "80304", "country_code": "US", "address":
+        ["4929 N Broadway"], "coordinate": {"latitude": 40.0568199157715, "longitude":
+        -105.282127380371}, "state_code": "CO"}, "phone": "7205368457", "snippet_text":
+        "This place is just great. The food is delectable, the staff is super helpful
+        and friendly, and the atmosphere is comfortable and homey. It''s pretty much
+        in...", "image_url": "http://s3-media3.fl.yelpcdn.com/bphoto/qmZugRcu4I9wQsUvtwq_Zw/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-720-536-8457",
+        "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "id": "wapos-boulder-2", "is_closed": false, "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": true, "distance": 6155.3980406618375, "mobile_url": "http://m.yelp.com/biz/tacos-del-norte-boulder",
+        "rating_img_url": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/f1def11e4e79/ico/stars/v1/stars_5.png",
+        "review_count": 13, "name": "Tacos Del Norte", "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/tQvTIWGj-e3LyZI1jYTUyg/ms.jpg",
+        "rating": 5.0, "url": "http://www.yelp.com/biz/tacos-del-norte-boulder", "location":
+        {"city": "Boulder", "display_address": ["4405 N Broadway", "Boulder, CO 80304"],
+        "geo_accuracy": 8.0, "postal_code": "80304", "country_code": "US", "address":
+        ["4405 N Broadway"], "coordinate": {"latitude": 40.0547703355551, "longitude":
+        -105.282188951969}, "state_code": "CO"}, "phone": "7202614066", "snippet_text":
+        "This toco stand is totally authentic, very affordable, and so tasty! \n\nI
+        had 2 el pastor tacos, hot, and they were a great bar munchie. \n\nRight behind...",
+        "image_url": "http://s3-media4.fl.yelpcdn.com/bphoto/S-EiehXuCkxxQhz0RSdR4w/ms.jpg",
+        "categories": [["Food Trucks", "foodtrucks"], ["Mexican", "mexican"]], "display_phone":
+        "+1-720-261-4066", "rating_img_url_large": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/22affc4e6c38/ico/stars/v1/stars_large_5.png",
+        "id": "tacos-del-norte-boulder", "is_closed": false, "rating_img_url_small":
+        "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/c7623205d5cd/ico/stars/v1/stars_small_5.png"},
+        {"is_claimed": true, "distance": 6497.410443008608, "mobile_url": "http://m.yelp.com/biz/verde-burrito-truck-boulder",
+        "rating_img_url": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png",
+        "review_count": 23, "name": "Verde Burrito Truck", "snippet_image_url": "http://s3-media4.fl.yelpcdn.com/assets/srv0/yelp_styleguide/cc4afe21892e/assets/img/default_avatars/user_medium_square.png",
+        "rating": 3.5, "url": "http://www.yelp.com/biz/verde-burrito-truck-boulder",
+        "location": {"city": "Boulder", "display_address": ["Boulder, CO 80304"],
+        "geo_accuracy": 9.5, "postal_code": "80304", "country_code": "US", "address":
+        [], "coordinate": {"latitude": 40.0454736, "longitude": -105.2838511}, "state_code":
+        "CO"}, "phone": "7204704348", "snippet_text": "It was the eve of my 34th birthday.
+        I finally felt like I had achieved that \"certain something\" I had been sacrificing
+        everything for. No job, broke, living...", "image_url": "http://s3-media4.fl.yelpcdn.com/bphoto/ZxYA8YDvhG8dp0UfnwsuHQ/ms.jpg",
+        "categories": [["Food Trucks", "foodtrucks"], ["Mexican", "mexican"]], "display_phone":
+        "+1-720-470-4348", "rating_img_url_large": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
+        "id": "verde-burrito-truck-boulder", "is_closed": false, "rating_img_url_small":
+        "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/2e909d5d3536/ico/stars/v1/stars_small_3_half.png"},
+        {"is_claimed": false, "distance": 4895.776570599291, "mobile_url": "http://m.yelp.com/biz/3-margaritas-boulder",
+        "rating_img_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/34bc8086841c/ico/stars/v1/stars_3.png",
+        "review_count": 35, "name": "3 Margaritas", "snippet_image_url": "http://s3-media4.fl.yelpcdn.com/assets/srv0/yelp_styleguide/cc4afe21892e/assets/img/default_avatars/user_medium_square.png",
+        "rating": 3.0, "url": "http://www.yelp.com/biz/3-margaritas-boulder", "location":
+        {"city": "Boulder", "display_address": ["3390 28th St", "Boulder, CO 80301"],
+        "geo_accuracy": 8.0, "postal_code": "80301", "country_code": "US", "address":
+        ["3390 28th St"], "coordinate": {"latitude": 40.03616, "longitude": -105.257538},
+        "state_code": "CO"}, "phone": "3039981234", "snippet_text": "Delish! I''ve
+        lived down the street from this place for years but never have tried it because
+        it looks very \"chainish\" and I''m not big into chains. But I''ve...", "image_url":
+        "http://s3-media1.fl.yelpcdn.com/bphoto/XiXhZJcOb3PrBRHZQFxXDQ/ms.jpg", "categories":
+        [["Mexican", "mexican"]], "display_phone": "+1-303-998-1234", "rating_img_url_large":
+        "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/e8b5b79d37ed/ico/stars/v1/stars_large_3.png",
+        "id": "3-margaritas-boulder", "is_closed": false, "rating_img_url_small":
+        "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/902abeed0983/ico/stars/v1/stars_small_3.png"},
+        {"is_claimed": false, "distance": 5788.652063303447, "mobile_url": "http://m.yelp.com/biz/ajuua-mexican-restaurant-longmont",
+        "rating_img_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/34bc8086841c/ico/stars/v1/stars_3.png",
+        "review_count": 29, "name": "Ajuua Mexican Restaurant", "snippet_image_url":
+        "http://s3-media3.fl.yelpcdn.com/photo/LE8XxDemtZkWI4XDRn4xmA/ms.jpg", "rating":
+        3.0, "url": "http://www.yelp.com/biz/ajuua-mexican-restaurant-longmont", "location":
+        {"city": "Longmont", "display_address": ["7960 Niwot Rd", "Longmont, CO 80503"],
+        "geo_accuracy": 8.0, "postal_code": "80503", "country_code": "US", "address":
+        ["7960 Niwot Rd"], "coordinate": {"latitude": 40.1015722006559, "longitude":
+        -105.16781821847}, "state_code": "CO"}, "phone": "3036523995", "snippet_text":
+        "We had the all you can eat enchiladas for $8.99 and it was worth every penny.
+        Delicious. Go there.", "image_url": "http://s3-media4.fl.yelpcdn.com/bphoto/duFzUhm41ssPiIlOESYI-Q/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-303-652-3995",
+        "rating_img_url_large": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/e8b5b79d37ed/ico/stars/v1/stars_large_3.png",
+        "id": "ajuua-mexican-restaurant-longmont", "is_closed": false, "rating_img_url_small":
+        "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/902abeed0983/ico/stars/v1/stars_small_3.png"},
+        {"is_claimed": true, "distance": 6337.059487398968, "mobile_url": "http://m.yelp.com/biz/cantina-laredo-boulder",
+        "rating_img_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/34bc8086841c/ico/stars/v1/stars_3.png",
+        "review_count": 92, "name": "Cantina Laredo", "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/Kzu9MaV5pCTpW2Axj5cKQQ/ms.jpg",
+        "rating": 3.0, "url": "http://www.yelp.com/biz/cantina-laredo-boulder", "location":
+        {"city": "Boulder", "display_address": ["1680 29th St", "Boulder, CO 80301"],
+        "geo_accuracy": 9.5, "postal_code": "80301", "country_code": "US", "address":
+        ["1680 29th St"], "coordinate": {"latitude": 40.0157839, "longitude": -105.255033},
+        "state_code": "CO"}, "menu_date_updated": 1433479466, "phone": "3034442260",
+        "snippet_text": "I visited for happy hour with a group of friends- I was really
+        surprised at how good their tacos were (and half-off at happy hour!). \n\nI
+        got the fajita...", "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/XtpXMjBKsiYTUzz7hlj1Ug/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-303-444-2260",
+        "rating_img_url_large": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/e8b5b79d37ed/ico/stars/v1/stars_large_3.png",
+        "menu_provider": "single_platform", "id": "cantina-laredo-boulder", "is_closed":
+        false, "rating_img_url_small": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/902abeed0983/ico/stars/v1/stars_small_3.png"},
+        {"is_claimed": true, "distance": 8019.052401180211, "mobile_url": "http://m.yelp.com/biz/centro-latin-kitchen-boulder-2",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 253, "name": "Centro Latin Kitchen", "snippet_image_url":
+        "http://s3-media1.fl.yelpcdn.com/photo/sCxiE4YTs4B_d2CVnC4V4A/ms.jpg", "rating":
+        4.0, "url": "http://www.yelp.com/biz/centro-latin-kitchen-boulder-2", "location":
+        {"city": "Boulder", "display_address": ["950 Pearl St", "Boulder, CO 80302"],
+        "geo_accuracy": 8.0, "postal_code": "80302", "country_code": "US", "address":
+        ["950 Pearl St"], "coordinate": {"latitude": 40.0171831995249, "longitude":
+        -105.283171981573}, "state_code": "CO"}, "menu_date_updated": 1434648229,
+        "phone": "3034427771", "snippet_text": "Checked out Centro with a group of
+        friends after running the BolderBoulder, and boy were we starving!  We got
+        there right as it opened, and it''s a good...", "image_url": "http://s3-media3.fl.yelpcdn.com/bphoto/fEg8mmzAT_Ab0tdxRtJBzQ/ms.jpg",
+        "categories": [["Latin American", "latin"], ["Mexican", "mexican"]], "display_phone":
+        "+1-303-442-7771", "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "menu_provider": "single_platform", "id": "centro-latin-kitchen-boulder-2",
+        "is_closed": false, "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": false, "distance": 7876.723253263772, "mobile_url": "http://m.yelp.com/biz/cafe-mexicali-boulder",
+        "rating_img_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/34bc8086841c/ico/stars/v1/stars_3.png",
+        "review_count": 45, "name": "Cafe Mexicali", "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/ddjIMLv9ERVaa1_fOf7XMw/ms.jpg",
+        "rating": 3.0, "url": "http://www.yelp.com/biz/cafe-mexicali-boulder", "location":
+        {"city": "Boulder", "display_address": ["2850 Baseline Rd", "Unit A-1", "Boulder,
+        CO 80303"], "geo_accuracy": 9.5, "postal_code": "80303", "country_code": "US",
+        "address": ["2850 Baseline Rd", "Unit A-1"], "coordinate": {"latitude": 39.999792,
+        "longitude": -105.256075}, "state_code": "CO"}, "phone": "3034425588", "snippet_text":
+        "Would be five stars if the music wasn''t giving me such a headache. Specifically
+        just this song \"I''ll be there\" TERRIBLE. \n\nOther than that this place
+        is great", "image_url": "http://s3-media2.fl.yelpcdn.com/bphoto/EPfDRWNQoZ8-EL51gjKRFQ/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-303-442-5588",
+        "rating_img_url_large": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/e8b5b79d37ed/ico/stars/v1/stars_large_3.png",
+        "id": "cafe-mexicali-boulder", "is_closed": false, "rating_img_url_small":
+        "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/902abeed0983/ico/stars/v1/stars_small_3.png"},
+        {"is_claimed": true, "distance": 6570.195805994921, "mobile_url": "http://m.yelp.com/biz/qdoba-mexican-grill-boulder",
+        "rating_img_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/34bc8086841c/ico/stars/v1/stars_3.png",
+        "review_count": 18, "name": "Qdoba Mexican Grill", "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/zfa5Dei7mDBovNAQjovIzA/ms.jpg",
+        "rating": 3.0, "url": "http://www.yelp.com/biz/qdoba-mexican-grill-boulder",
+        "location": {"city": "Boulder", "display_address": ["1625 28th St", "Boulder,
+        CO 80301"], "geo_accuracy": 9.5, "postal_code": "80301", "country_code": "US",
+        "address": ["1625 28th St"], "coordinate": {"latitude": 40.015449326981, "longitude":
+        -105.2589287806}, "state_code": "CO"}, "phone": "3034401006", "snippet_text":
+        "It''s good. It''s not great.\nI''ve eaten at this location since it has opened
+        and I loved it for many years, but recently the chicken quality isn''t what
+        is has...", "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/zBY2W49FSyde00HbvY-AbQ/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-303-440-1006",
+        "rating_img_url_large": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/e8b5b79d37ed/ico/stars/v1/stars_large_3.png",
+        "id": "qdoba-mexican-grill-boulder", "is_closed": false, "rating_img_url_small":
+        "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/902abeed0983/ico/stars/v1/stars_small_3.png"},
+        {"is_claimed": true, "distance": 6431.963910206504, "mobile_url": "http://m.yelp.com/biz/chipotle-mexican-grill-boulder-2",
+        "rating_img_url": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png",
+        "review_count": 36, "name": "Chipotle Mexican Grill", "snippet_image_url":
+        "http://s3-media4.fl.yelpcdn.com/photo/ThbsHqjTVJeGNZHIWxaNSA/ms.jpg", "rating":
+        3.5, "url": "http://www.yelp.com/biz/chipotle-mexican-grill-boulder-2", "location":
+        {"city": "Boulder", "display_address": ["1650 28th St", "Boulder, CO 80302"],
+        "geo_accuracy": 9.5, "postal_code": "80302", "country_code": "US", "address":
+        ["1650 28th St"], "coordinate": {"latitude": 40.016393, "longitude": -105.257871},
+        "state_code": "CO"}, "phone": "7204060500", "snippet_text": "The best thing
+        is that it is all organic. Hence 4 stars. Tastes decent, not perfect hence
+        one star less. Clean. Welcoming staff.", "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/6HaCyWgGN2IqomOsHf4f5g/ms.jpg",
+        "categories": [["Mexican", "mexican"], ["Fast Food", "hotdogs"]], "display_phone":
+        "+1-720-406-0500", "rating_img_url_large": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
+        "id": "chipotle-mexican-grill-boulder-2", "is_closed": false, "rating_img_url_small":
+        "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/2e909d5d3536/ico/stars/v1/stars_small_3_half.png"}]}'
+    http_version:
+  recorded_at: Sun, 21 Jun 2015 00:16:02 GMT
+recorded_with: VCR 2.9.3
