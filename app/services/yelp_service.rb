@@ -6,7 +6,6 @@ class YelpService
 
     businesses.map do |business|
       yb = YourBurritos.new
-      # binding.pry
       yb.name = business.name
       yb.rating = business.rating
       yb.url = business.mobile_url

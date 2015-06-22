@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
   L.mapbox.accessToken = 'pk.eyJ1IjoidGxlc2tpbiIsImEiOiI1MTIyOTVkYWIwODNlMjM3ZmI1NzNjOWYyNjM5OWIzOCJ9.jRUuyE7bubZRpeh2TEjreg'
-
+  var changeLat = 0;
+  var changeLon = 0;
   // Setup modules
   var geolocate = document.getElementById('geolocate'),
       map       = L.mapbox.map('map', 'tleskin.mf90jh31'),
@@ -67,6 +68,8 @@ $(document).ready(function(){
         var myBurritos = [];
 
         burritos.map(function(burrito) {
+          changeLat = burrito.table.latitude;
+          changeLon = burrito.table.longitude;
           myBurritos.push({
             type: "Feature",
             geometry: {
@@ -87,21 +90,24 @@ $(document).ready(function(){
 
           //  $("#map").removeClass("big-map").addClass("small-map");
              var burritoLayer = map.featureLayer.setGeoJSON(myBurritos);
-             debugger;
-             map.fitBounds(burritoLayer.getBounds());
-
+            //  debugger;
+             //map.fitBounds(burritoLayer.getBounds());
+             map.setView([changeLat, changeLon], 14)
              // Create Div For Burrito Layer
              var $burritoDiv = $("#burritos");
 
              $("#burritos").addClass("burritos")
              $burritoDiv.empty();
              $burritoDiv.append(burritos.map(function(burrito){
-               return $( "<h3>" + burrito.table.name + "</h3>" +
+                 debugger;
+               return $(
+                 "<h3>" + burrito.table.name + "</h3>" +
                "<p>" + burrito.table.address + "</p>" +
                "<p>" + burrito.table.city + "</p>"+
                "<p>" + burrito.table.state + "</p>" +
                "<p>" + burrito.table.zip + "</p>" +
                "<p>" + burrito.table.country + "</p>" +
+               "<button name='fav' id='burrito-button"+ burrito +"'>Bookmark This Burrito!</button>" +
                "<p> -------------</p>");
                 }));
 

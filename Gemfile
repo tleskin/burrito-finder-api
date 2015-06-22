@@ -20,6 +20,7 @@ gem "skylight"
 gem "teaspoon"
 gem "teaspoon-mocha"
 gem "phantomjs"
+gem 'webmock', group: :test
 
 group :development, :test do
   gem 'capybara'
@@ -28,7 +29,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'pry'
   gem 'vcr'
-  gem 'webmock'
   gem 'simplecov'
   gem 'launchy'
   gem 'database_cleaner'
