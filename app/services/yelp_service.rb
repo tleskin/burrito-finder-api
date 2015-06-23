@@ -12,12 +12,7 @@ class YelpService
       yb.url = business.mobile_url
       yb.rating_large = business.rating_img_url_large
       yb.rating_small = business.rating_img_url_small
-      yb.distance = business.distance
-      if business.is_closed
-        yb.is_close = "Currently Open"
-      else
-        yb.is_close = "Currently Closed"
-      end
+      yb.distance = business.distance / 1000
       yb.address = business.location.address
       yb.city = business.location.city
       yb.state = business.location.state_code
