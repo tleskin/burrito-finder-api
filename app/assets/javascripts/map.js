@@ -3,6 +3,8 @@ $(document).ready(function(){
   L.mapbox.accessToken = 'pk.eyJ1IjoidGxlc2tpbiIsImEiOiI1MTIyOTVkYWIwODNlMjM3ZmI1NzNjOWYyNjM5OWIzOCJ9.jRUuyE7bubZRpeh2TEjreg'
   var changeLat = 0;
   var changeLon = 0;
+  var myBurritos = [];
+
   // Setup modules
   var geolocate = document.getElementById('geolocate'),
       map       = L.mapbox.map('map', 'tleskin.mf90jh31'),
@@ -65,11 +67,12 @@ $(document).ready(function(){
 
         $("#spinner").toggleClass("hidden");
 
-        var myBurritos = [];
+        myBurritos = [];
 
         burritos.map(function(burrito) {
           changeLat = burrito.table.latitude;
           changeLon = burrito.table.longitude;
+
           myBurritos.push({
             type: "Feature",
             geometry: {
@@ -90,27 +93,54 @@ $(document).ready(function(){
 
           //  $("#map").removeClass("big-map").addClass("small-map");
              var burritoLayer = map.featureLayer.setGeoJSON(myBurritos);
-            //  debugger;
+
              //map.fitBounds(burritoLayer.getBounds());
              map.setView([changeLat, changeLon], 14)
              // Create Div For Burrito Layer
              var $burritoDiv = $("#burritos");
-
              $("#burritos").addClass("burritos")
              $burritoDiv.empty();
              $burritoDiv.append(burritos.map(function(burrito){
-                 debugger;
-               return $(
-                 "<h3>" + burrito.table.name + "</h3>" +
-               "<p>" + burrito.table.address + "</p>" +
-               "<p>" + burrito.table.city + "</p>"+
-               "<p>" + burrito.table.state + "</p>" +
-               "<p>" + burrito.table.zip + "</p>" +
-               "<p>" + burrito.table.country + "</p>" +
-               "<button name='fav' id='burrito-button"+ burrito +"'>Bookmark This Burrito!</button>" +
-               "<p> -------------</p>");
-                }));
 
+               return $(
+                 "<div='invisible'><p class='hidden'>" + burrito.table.id +
+                 " </p><p><strong><h4>" + burrito.table.name + "</h4></strong></p>" +
+                "<p><img src=" + burrito.table.rating_large + "></p>"+
+               "<p>" + burrito.table.address + "</p>" +
+               "<p>" + burrito.table.city + ", " + burrito.table.state + " " +
+               burrito.table.zip + "</p>"+
+               "<p><a href=" + burrito.table.url + " target='_blank'>Visit on Yelp!</a></p>" +
+               "<button class='burrito-button' name='fav'>Bookmark This Burrito!</button>" +
+               "<p> ----------------------------------</p></div>");
+              }));
+
+              $(".burrito-button").click(function(){
+                var thing = $(this).parent().text();
+                var burritoObject = favBurritoObject(burritos, thing);
+                debugger;
+
+                var postParams = { name: burritoObject.table.name,
+                                   address: burritoObject.table.address,
+                                   city: burritoObject.table.city,
+                                   state: burritoObject.table.state,
+                                   zip: burritoObject.table.zip,
+                                   url: burritoObject.table.url}
+
+                $.ajax({
+                  type: 'POST',
+                  url: '/favorites',
+                  data: postParams
+                  // success: alert("Restaurant added to favorites!")
+                })
+
+
+
+              });
+
+              function favBurritoObject(burritos, thing){
+                var index = thing.slice(0, 2).trim();
+                return burritos[index]
+              };
         });
       });
   });
@@ -122,5 +152,6 @@ $(document).ready(function(){
     $("#spinner").toggleClass("hidden");
     geolocate.innerHTML = 'Position could not be found';
   });
+
 
 });

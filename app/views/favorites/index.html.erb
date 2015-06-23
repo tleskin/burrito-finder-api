@@ -4,10 +4,13 @@
     <h2>Favorite Burritos</h1>
   </div>
 
-  <% @burritos.each do |burrito|  %>
+  <% @favorites.each do |favorite|  %>
   <div class="each-favorite-burrito">
-    <h4><%= burrito[:name] %></h4>
-    <p><%= burrito[:location] %></p>
+    <h4><%= favorite.name %></h4>
+    <p><%= favorite.address %></p>
+    <p><%= favorite.city %>, <%= favorite.state %> <%= favorite.zip %></p>
+    <p><%= link_to "Visit on Yelp!", "#{ favorite.url}" %></p>
+    <p><%= button_to "Remove From Favorites", favorite_path(id: favorite.id), class:"button radius", method: :delete %></p>
   </div>
   <% end %>
 </div>

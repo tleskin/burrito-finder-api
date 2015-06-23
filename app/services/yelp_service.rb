@@ -3,16 +3,21 @@ class YelpService
     params = { term: 'burrito' }
     coordinates = { latitude: lat, longitude: lon }
     businesses = Yelp.client.search_by_coordinates(coordinates, params).businesses
-
+    index = 0
     businesses.map do |business|
       yb = YourBurritos.new
+      yb.id = index
       yb.name = business.name
       yb.rating = business.rating
       yb.url = business.mobile_url
       yb.rating_large = business.rating_img_url_large
       yb.rating_small = business.rating_img_url_small
       yb.distance = business.distance
-      yb.is_close = business.is_closed
+      if business.is_closed
+        yb.is_close = "Currently Open"
+      else
+        yb.is_close = "Currently Closed"
+      end
       yb.address = business.location.address
       yb.city = business.location.city
       yb.state = business.location.state_code
@@ -20,6 +25,7 @@ class YelpService
       yb.zip = business.location.postal_code
       yb.latitude = business.location.coordinate.latitude
       yb.longitude = business.location.coordinate.longitude
+      index += 1
       yb
     end
   end
