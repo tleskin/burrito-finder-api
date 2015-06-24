@@ -12,7 +12,8 @@ class FavoritesController < ApplicationController
                              address: params[:address],
                              city: params[:city],
                              zip: params[:zip],
-                             state: params[:state]})
+                             state: params[:state],
+                             user_id: current_user.id})
     if favorite.save
       @message = {message: "#{favorite.name} added to your meetups!"}
       respond_with @message, status: 201, location: favorites_path

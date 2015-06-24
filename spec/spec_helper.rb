@@ -3,6 +3,7 @@ require "./spec/support/omniauth_macros"
 require 'webmock/rspec'
 require 'vcr'
 require 'simplecov'
+require 'capybara/rspec'
 SimpleCov.start
 
 
@@ -10,6 +11,7 @@ WebMock.allow_net_connect!(:net_http_connect_on_start => true)
 OmniAuth.config.test_mode = true
 
 RSpec.configure do |config|
+
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
@@ -30,6 +32,8 @@ RSpec.configure do |config|
 
   config.include(OmniauthMacros)
 end
+
+
 
 VCR.configure do |config|
   config.cassette_library_dir = "spec/vcr_cassettes"
