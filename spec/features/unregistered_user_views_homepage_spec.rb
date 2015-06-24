@@ -5,7 +5,7 @@ RSpec.describe "unregistered user" do
 
     it "can see the homepage" do
       visit root_path
-
+      
       expect(page).to have_content("BurritoFinder")
     end
   end

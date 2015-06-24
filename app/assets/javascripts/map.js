@@ -97,8 +97,6 @@ $(document).ready(function(){
           });
 
 
-
-          //  $("#map").removeClass("big-map").addClass("small-map");
              var burritoLayer = map.featureLayer.setGeoJSON(myBurritos);
 
              //map.fitBounds(burritoLayer.getBounds());
@@ -133,21 +131,11 @@ $(document).ready(function(){
                                    zip: burritoObject.table.zip,
                                    url: burritoObject.table.url}
 
-                $.ajax({
-                  type: 'POST',
-                  url: '/favorites',
-                  data: postParams
-                  // success: alert("Restaurant added to favorites!")
-
-                  // $('#flash_area).html(<flash message>);
-
-                })
-
-
-
+                  $.post( "/favorites", postParams)
+                    .done(function( data ) {
+                      alert( data.message );
+                    });
               });
-
-
         });
       });
   });

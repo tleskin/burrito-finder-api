@@ -1,3 +1,5 @@
+require 'omniauth'
+require "./spec/support/omniauth_macros"
 require 'webmock/rspec'
 require 'vcr'
 require 'simplecov'
@@ -5,6 +7,7 @@ SimpleCov.start
 
 
 WebMock.allow_net_connect!(:net_http_connect_on_start => true)
+OmniAuth.config.test_mode = true
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -24,6 +27,8 @@ RSpec.configure do |config|
 
   Kernel.srand config.seed
   config.backtrace_exclusion_patterns << %r{/gems/}
+
+  config.include(OmniauthMacros)
 end
 
 VCR.configure do |config|

@@ -1,5 +1,7 @@
 class FavoritesController < ApplicationController
   before_action :authorize!
+  respond_to :json
+
   def index
     @favorites = Favorite.all
   end
@@ -12,11 +14,11 @@ class FavoritesController < ApplicationController
                              zip: params[:zip],
                              state: params[:state]})
     if favorite.save
-      flash[:message] = "#{favorite.name} added to your meetups!"
-      render :nothing => true
+      @message = {message: "#{favorite.name} added to your meetups!"}
+      respond_with @message, status: 201, location: favorites_path
     else
-      flash[:error] = "You've already added #{favorite.name} to your meetups!"
-      render :nothing => true
+      @message = {message: "You've already added #{favorite.name} to your meetups!"}
+      respond_with @message, status: 201, location: favorites_path
     end
   end
 
