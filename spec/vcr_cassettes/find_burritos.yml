@@ -1,0 +1,366 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.yelp.com/v2/search?ll=39.749964,-105.000012,,,&term=burrito
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Authorization:
+      - OAuth oauth_consumer_key="ae68O8R7F20O_RULNb8p4A", oauth_nonce="7e811d869fa00ccc4d0a64ecf7818129",
+        oauth_signature="an1K%2FbRSoopJM9DyZqRHs2VljLU%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1435165893", oauth_token="la6wHLlWwsgNKIhMvoDspu5S46SS4X-a",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 24 Jun 2015 17:11:33 GMT
+      Server:
+      - Apache
+      X-Node:
+      - web10-uswest1aprod, api_com
+      Cache-Control:
+      - private
+      Set-Cookie:
+      - bse=1e0ac2a333f0a26e10c09d60bd1ee406; Domain=.yelp.com; Path=/; HttpOnly
+      - yuv=rZupULzJ1QshzwmvmlNHoQsyaaxDoTKTdyg0vEW0KTdLW53YQwqXRUkNQdVtvciQJDKbzqRZ3JIJx4GyadqoQEkDzMDb3xrU;
+        Domain=.yelp.com; Max-Age=630720000; Path=/; expires=Tue, 19-Jun-2035 17:11:33
+        GMT
+      Vary:
+      - Accept-Encoding,User-Agent
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Mode:
+      - ro
+      X-Proxied:
+      - extlb1-uswest1bprod
+    body:
+      encoding: ASCII-8BIT
+      string: '{"region": {"span": {"latitude_delta": 0.05557127365075587, "longitude_delta":
+        0.08723462000000382}, "center": {"latitude": 39.75139733015875, "longitude":
+        -105.00584190000001}}, "total": 577, "businesses": [{"is_claimed": true, "distance":
+        110.24862016379709, "mobile_url": "http://m.yelp.com/biz/illegal-petes-denver",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 395, "name": "Illegal Pete''s", "snippet_image_url": "http://s3-media2.fl.yelpcdn.com/photo/wT9Ug10D5u1BkDQ0SoizSg/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/illegal-petes-denver", "location":
+        {"city": "Denver", "display_address": ["1530 16th St", "Ste 101", "Northwest",
+        "Denver, CO 80202"], "geo_accuracy": 9.5, "neighborhoods": ["Northwest", "Lodo"],
+        "postal_code": "80202", "country_code": "US", "address": ["1530 16th St",
+        "Ste 101"], "coordinate": {"latitude": 39.75095207521079, "longitude": -104.999905067144},
+        "state_code": "CO"}, "phone": "3036232169", "snippet_text": "I always thought
+        that I liked chipotle but, after visiting this Illegal Pete''s location for
+        the first time I know that I was mistaken. Everything is...", "image_url":
+        "http://s3-media3.fl.yelpcdn.com/bphoto/0kTshor3kjMuUfhXeHiFaA/ms.jpg", "categories":
+        [["Bars", "bars"], ["Fast Food", "hotdogs"], ["Mexican", "mexican"]], "display_phone":
+        "+1-303-623-2169", "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "id": "illegal-petes-denver", "is_closed": false, "rating_img_url_small":
+        "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": false, "distance": 243.2563861047735, "mobile_url": "http://m.yelp.com/biz/burrito-cart-denver",
+        "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+        "review_count": 15, "name": "Burrito Cart", "snippet_image_url": "http://s3-media2.fl.yelpcdn.com/photo/__9fuDoQgS2TaUw71iTlbg/ms.jpg",
+        "rating": 4.5, "url": "http://www.yelp.com/biz/burrito-cart-denver", "snippet_text":
+        "Awesome. Very friendly people. The tacos are great, the salsa is very good,
+        their burritos are awesome (they steam the tortilla it makes it sweet). I
+        would...", "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/VAFd_FBL0MoJqQjm9IgyJQ/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+        "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+        "id": "burrito-cart-denver", "is_closed": false, "location": {"city": "Denver",
+        "display_address": ["17th and Blake", "Northwest", "Denver, CO 80202"], "geo_accuracy":
+        7.0, "neighborhoods": ["Northwest", "Lodo"], "postal_code": "80202", "country_code":
+        "US", "address": ["17th and Blake"], "coordinate": {"latitude": 39.751461,
+        "longitude": -104.997963}, "state_code": "CO"}}, {"is_claimed": false, "distance":
+        1975.5651110026433, "mobile_url": "http://m.yelp.com/biz/la-abeja-denver",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 75, "name": "La Abeja", "snippet_image_url": "http://s3-media4.fl.yelpcdn.com/photo/N2Z8dgpV8cTwfByoprd_zw/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/la-abeja-denver", "location":
+        {"city": "Denver", "display_address": ["508 E Colfax Ave", "Uptown", "Denver,
+        CO 80203"], "geo_accuracy": 8.0, "neighborhoods": ["Uptown", "Northwest"],
+        "postal_code": "80203", "country_code": "US", "address": ["508 E Colfax Ave"],
+        "coordinate": {"latitude": 39.739982932806, "longitude": -104.98082600534},
+        "state_code": "CO"}, "phone": "3038321911", "snippet_text": "My husband didn''t
+        believe me when I told him I finally found a good Mexican restaurant in town.
+        We''ve been burned by multiple places in the past, always...", "image_url":
+        "http://s3-media2.fl.yelpcdn.com/bphoto/d0cDxmlpMiEcT9lkHdHqCw/ms.jpg", "categories":
+        [["Bakeries", "bakeries"], ["Mexican", "mexican"]], "display_phone": "+1-303-832-1911",
+        "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "id": "la-abeja-denver", "is_closed": false, "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": false, "distance": 2202.4153257838157, "mobile_url": "http://m.yelp.com/biz/los-carboncitos-denver",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 167, "name": "Los Carboncitos", "snippet_image_url": "http://s3-media4.fl.yelpcdn.com/photo/64PvvaXyZ9TL_wCwhvh30g/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/los-carboncitos-denver", "location":
+        {"city": "Denver", "display_address": ["3757 Pecos St", "Northwest", "Denver,
+        CO 80211"], "geo_accuracy": 8.0, "neighborhoods": ["Northwest"], "postal_code":
+        "80211", "country_code": "US", "address": ["3757 Pecos St"], "coordinate":
+        {"latitude": 39.7691383, "longitude": -105.0066528}, "state_code": "CO"},
+        "phone": "3034580880", "snippet_text": "Los carboncitos is a really great
+        local mexican restaurant. All of the food is inexpensive, I''m talking $1.50
+        tacos, and extremely fresh. \n\nWhen you walk in...", "image_url": "http://s3-media3.fl.yelpcdn.com/bphoto/KnjrG4XI9eDIV2JU-7Nv2Q/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-303-458-0880",
+        "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "id": "los-carboncitos-denver", "is_closed": false, "rating_img_url_small":
+        "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": true, "distance": 551.3481318881481, "mobile_url": "http://m.yelp.com/biz/sams-no-3-denver",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 767, "name": "Sam''s No. 3", "snippet_image_url": "http://s3-media2.fl.yelpcdn.com/photo/nFO4ctRmntUBTSPTSVITwg/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/sams-no-3-denver", "location":
+        {"city": "Denver", "display_address": ["1500 Curtis St", "Northwest", "Denver,
+        CO 80202"], "geo_accuracy": 8.0, "neighborhoods": ["Northwest", "CBD"], "postal_code":
+        "80202", "country_code": "US", "address": ["1500 Curtis St"], "coordinate":
+        {"latitude": 39.7462, "longitude": -104.995605}, "state_code": "CO"}, "menu_date_updated":
+        1431564096, "phone": "3035341927", "snippet_text": "Ugh I wanna give this
+        famous spit 5 stars, but a couple things happened that just kind of fell flat.
+        \n\nThe place was busy, which was expected, but when my...", "image_url":
+        "http://s3-media2.fl.yelpcdn.com/bphoto/jPAWZ8h9yVRvXOmADcodgg/ms.jpg", "categories":
+        [["Diners", "diners"], ["Mexican", "mexican"], ["American (Traditional)",
+        "tradamerican"]], "display_phone": "+1-303-534-1927", "rating_img_url_large":
+        "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "menu_provider": "single_platform", "id": "sams-no-3-denver", "is_closed":
+        false, "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": true, "distance": 35.49676800999835, "mobile_url": "http://m.yelp.com/biz/d-corazon-denver-2",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 301, "name": "D''Corazon", "snippet_image_url": "http://s3-media4.fl.yelpcdn.com/photo/64PvvaXyZ9TL_wCwhvh30g/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/d-corazon-denver-2", "location":
+        {"city": "Denver", "display_address": ["1530 Blake St", "Unit C", "Northwest",
+        "Denver, CO 80202"], "geo_accuracy": 8.0, "neighborhoods": ["Northwest", "Lodo"],
+        "postal_code": "80202", "country_code": "US", "address": ["1530 Blake St",
+        "Unit C"], "coordinate": {"latitude": 39.7499199, "longitude": -104.9995422},
+        "state_code": "CO"}, "phone": "7209048226", "snippet_text": "The best carnitas
+        in town! I LOVE this restaurant, it is a little divey but the prices are unbeatable
+        and the food is delicious. I think it speaks volumes...", "image_url": "http://s3-media2.fl.yelpcdn.com/bphoto/Bobv0xSrMyImVNHFqNtAjg/ms.jpg",
+        "categories": [["Mexican", "mexican"], ["Bars", "bars"]], "display_phone":
+        "+1-720-904-8226", "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "id": "d-corazon-denver-2", "is_closed": false, "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": true, "distance": 4126.685811414968, "mobile_url": "http://m.yelp.com/biz/scratch-burrito-and-happy-tap-denver",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 140, "name": "Scratch Burrito \u0026 Happy Tap", "snippet_image_url":
+        "http://s3-media4.fl.yelpcdn.com/photo/Oc1A6H2aS50UIHPJ0BMBPQ/ms.jpg", "rating":
+        4.0, "url": "http://www.yelp.com/biz/scratch-burrito-and-happy-tap-denver",
+        "location": {"city": "Denver", "display_address": ["4262 Lowell Blvd", "Northwest",
+        "Denver, CO 80211"], "geo_accuracy": 9.5, "neighborhoods": ["Northwest"],
+        "postal_code": "80211", "country_code": "US", "address": ["4262 Lowell Blvd"],
+        "coordinate": {"latitude": 39.776115, "longitude": -105.034269}, "state_code":
+        "CO"}, "phone": "3034773000", "snippet_text": "Super lunch here. Fresh delicious
+        food. Unusual flavor combos and really friendly helpful service. \n\nDidn''t
+        try the cocktails but will make it back soon to...", "image_url": "http://s3-media4.fl.yelpcdn.com/bphoto/7VkeBA2ijh6swbaMSkuS3Q/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-303-477-3000",
+        "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "id": "scratch-burrito-and-happy-tap-denver", "is_closed": false, "rating_img_url_small":
+        "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": false, "distance": 810.8973694364055, "mobile_url": "http://m.yelp.com/biz/la-popular-denver",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 53, "name": "La Popular", "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/aexeIayGbGnPMaXaXk0i0g/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/la-popular-denver", "location":
+        {"city": "Denver", "display_address": ["2033 Lawrence St", "Five Points",
+        "Denver, CO 80205"], "geo_accuracy": 8.0, "neighborhoods": ["Five Points",
+        "Northwest"], "postal_code": "80205", "country_code": "US", "address": ["2033
+        Lawrence St"], "coordinate": {"latitude": 39.752941, "longitude": -104.991356},
+        "state_code": "CO"}, "phone": "3032961687", "snippet_text": "I come here often
+        to cure my hangover and it always works for me. \nI have tried a few things
+        on the menu and my favorite so far is a breakfast burrito. \nI...", "image_url":
+        "http://s3-media3.fl.yelpcdn.com/bphoto/HCPzDpVx9O7kvdbi3XUxug/ms.jpg", "categories":
+        [["Mexican", "mexican"]], "display_phone": "+1-303-296-1687", "rating_img_url_large":
+        "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "id": "la-popular-denver", "is_closed": false, "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": true, "distance": 2492.2591452589845, "mobile_url": "http://m.yelp.com/biz/el-taco-de-mexico-denver",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 276, "name": "El Taco De Mexico", "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/OglaAQhE9FfXHhiX_HFr6Q/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/el-taco-de-mexico-denver",
+        "location": {"city": "Denver", "display_address": ["714 Santa Fe Dr", "Southwest",
+        "Denver, CO 80204"], "geo_accuracy": 8.0, "neighborhoods": ["Southwest", "Lincoln
+        Park"], "postal_code": "80204", "country_code": "US", "address": ["714 Santa
+        Fe Dr"], "coordinate": {"latitude": 39.727558, "longitude": -104.998314},
+        "state_code": "CO"}, "menu_date_updated": 1387942384, "phone": "3036233926",
+        "snippet_text": "You will order the chorizo and egg breakfast burrito. You
+        will order it smothered. \n\nYOU WILL LOVE IT.", "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/7u2JR290dSDHgdr_4BBPWA/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-303-623-3926",
+        "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "menu_provider": "single_platform", "id": "el-taco-de-mexico-denver", "is_closed":
+        false, "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": true, "distance": 2983.1866612600534, "mobile_url": "http://m.yelp.com/biz/moontower-tacos-denver",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 281, "name": "Moontower Tacos", "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/CqBkRT6sY97hvK7eSLC2OQ/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/moontower-tacos-denver", "location":
+        {"city": "Denver", "display_address": ["609 Grant St", "Southwest", "Denver,
+        CO 80203"], "geo_accuracy": 9.5, "neighborhoods": ["Southwest", "Alamo Placita"],
+        "postal_code": "80203", "country_code": "US", "address": ["609 Grant St"],
+        "coordinate": {"latitude": 39.7261376603175, "longitude": -104.983975459857},
+        "state_code": "CO"}, "menu_date_updated": 1434713602, "phone": "3038321107",
+        "snippet_text": "Came here for dinner tonight with the hubby and it exceeded
+        expectations! We found it on grubhub and decided to come into the restaurant
+        - and are we glad...", "image_url": "http://s3-media3.fl.yelpcdn.com/bphoto/jJJnGScH7hzdEfVlhARTEg/ms.jpg",
+        "categories": [["American (New)", "newamerican"], ["Mexican", "mexican"]],
+        "display_phone": "+1-303-832-1107", "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "menu_provider": "eat24", "id": "moontower-tacos-denver", "is_closed": false,
+        "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": false, "distance": 2991.452635580354, "mobile_url": "http://m.yelp.com/biz/bocaza-mexican-grille-denver",
+        "rating_img_url": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png",
+        "review_count": 82, "name": "Bocaza Mexican Grille", "snippet_image_url":
+        "http://s3-media3.fl.yelpcdn.com/photo/bUWgHmdO2Yq1Q89Estd6ig/ms.jpg", "rating":
+        3.5, "url": "http://www.yelp.com/biz/bocaza-mexican-grille-denver", "location":
+        {"city": "Denver", "display_address": ["1740 E 17th Ave", "Northeast", "Denver,
+        CO 80218"], "geo_accuracy": 8.0, "neighborhoods": ["Northeast"], "postal_code":
+        "80218", "country_code": "US", "address": ["1740 E 17th Ave"], "coordinate":
+        {"latitude": 39.742992, "longitude": -104.966156}, "state_code": "CO"}, "menu_date_updated":
+        1426531853, "phone": "3033937545", "snippet_text": "If you want delicious,
+        fast, and filling authentic Mexican cuisine, I highly recommend this establishment!
+        \n\nVery similar to Chipotle and Qdoba style,...", "image_url": "http://s3-media4.fl.yelpcdn.com/bphoto/uUNdPNOwRYsNaTR8SPTzdw/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-303-393-7545",
+        "rating_img_url_large": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
+        "menu_provider": "eat24", "id": "bocaza-mexican-grille-denver", "is_closed":
+        false, "rating_img_url_small": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/2e909d5d3536/ico/stars/v1/stars_small_3_half.png"},
+        {"is_claimed": false, "distance": 1778.1671618925322, "mobile_url": "http://m.yelp.com/biz/gomez-on-park-avenue-denver",
+        "rating_img_url": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png",
+        "review_count": 52, "name": "Gomez on Park Avenue", "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/zyd2GRZpBtFSDaGRaWJXTg/ms.jpg",
+        "rating": 3.5, "url": "http://www.yelp.com/biz/gomez-on-park-avenue-denver",
+        "location": {"city": "Denver", "display_address": ["3460 Park Ave W", "Northwest",
+        "Denver, CO 80216"], "geo_accuracy": 8.0, "neighborhoods": ["Northwest"],
+        "postal_code": "80216", "country_code": "US", "address": ["3460 Park Ave W"],
+        "coordinate": {"latitude": 39.765274, "longitude": -104.993965}, "state_code":
+        "CO"}, "phone": "3034554044", "snippet_text": "I love Gomez. It''s on my way
+        to work, and I only allow myself to stop once a week because otherwise I''d
+        be 29034 lbs. \n\nAnyhoo, I''ve only gotten breakfast...", "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/ZvFGzhUWzcsLTffvdSA8NQ/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-303-455-4044",
+        "rating_img_url_large": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
+        "id": "gomez-on-park-avenue-denver", "is_closed": false, "rating_img_url_small":
+        "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/2e909d5d3536/ico/stars/v1/stars_small_3_half.png"},
+        {"is_claimed": false, "distance": 2047.980962566216, "mobile_url": "http://m.yelp.com/biz/la-mexicana-taqueria-denver",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 76, "name": "La Mexicana Taqueria", "snippet_image_url": "http://s3-media2.fl.yelpcdn.com/photo/Wa40B-V4O-NhSNWwlBekVg/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/la-mexicana-taqueria-denver",
+        "location": {"city": "Denver", "display_address": ["2538 W 32nd Ave", "Ste
+        B", "Northwest", "Denver, CO 80211"], "geo_accuracy": 8.0, "neighborhoods":
+        ["Northwest", "Highland"], "postal_code": "80211", "country_code": "US", "address":
+        ["2538 W 32nd Ave", "Ste B"], "coordinate": {"latitude": 39.761749, "longitude":
+        -105.018424}, "state_code": "CO"}, "phone": "3034333008", "snippet_text":
+        "Overall a great experience.  The relleno plate is great and my son loves
+        the homemade refried beans in his burrito.. \n\nAs I look around I see happy
+        families...", "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/ifQSg3l8QBxQDbarrtyCaw/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-303-433-3008",
+        "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "id": "la-mexicana-taqueria-denver", "is_closed": false, "rating_img_url_small":
+        "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": true, "distance": 4458.6020473841345, "mobile_url": "http://m.yelp.com/biz/burrito-giant-denver",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 104, "name": "Burrito Giant", "snippet_image_url": "http://s3-media2.fl.yelpcdn.com/photo/nV520fWIVEsj4j3OLxlJaA/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/burrito-giant-denver", "location":
+        {"city": "Denver", "display_address": ["4501 W 38th Ave", "Northwest", "Denver,
+        CO 80212"], "geo_accuracy": 8.0, "neighborhoods": ["Northwest"], "postal_code":
+        "80212", "country_code": "US", "address": ["4501 W 38th Ave"], "coordinate":
+        {"latitude": 39.7695618, "longitude": -105.0454865}, "state_code": "CO"},
+        "phone": "3034770047", "snippet_text": "Can''t beat this place for the price!
+        It''s just a little place inside and if you''re driving the speed limit you
+        very well could blink and miss it! If you do...", "image_url": "http://s3-media3.fl.yelpcdn.com/bphoto/CTVYUwXKgri6lJDawsQcwQ/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-303-477-0047",
+        "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "id": "burrito-giant-denver", "is_closed": false, "rating_img_url_small":
+        "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": false, "distance": 2171.887662025271, "mobile_url": "http://m.yelp.com/biz/the-original-chubbys-denver",
+        "rating_img_url": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png",
+        "review_count": 163, "name": "The Orginal Chubby''s", "snippet_image_url":
+        "http://s3-media2.fl.yelpcdn.com/photo/Ro-RaMcCP0e_CBofwyNEyg/ms.jpg", "rating":
+        3.5, "url": "http://www.yelp.com/biz/the-original-chubbys-denver", "location":
+        {"city": "Denver", "display_address": ["1231 W 38th Ave", "Northwest", "Denver,
+        CO 80211"], "geo_accuracy": 8.0, "neighborhoods": ["Northwest"], "postal_code":
+        "80211", "country_code": "US", "address": ["1231 W 38th Ave"], "coordinate":
+        {"latitude": 39.7695007, "longitude": -105.0015488}, "state_code": "CO"},
+        "phone": "3034559311", "snippet_text": "there may not be room to stand or
+        proper take away containers, but this Northside landmark has, hands down the
+        best green chile in Denver.. if you are here...", "image_url": "http://s3-media3.fl.yelpcdn.com/bphoto/7fPj1IMPdFPqnUYcpQ8u9w/ms.jpg",
+        "categories": [["Mexican", "mexican"], ["Fast Food", "hotdogs"], ["Hot Dogs",
+        "hotdog"]], "display_phone": "+1-303-455-9311", "rating_img_url_large": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
+        "id": "the-original-chubbys-denver", "is_closed": false, "rating_img_url_small":
+        "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/2e909d5d3536/ico/stars/v1/stars_small_3_half.png"},
+        {"is_claimed": false, "distance": 2136.3473520608336, "mobile_url": "http://m.yelp.com/biz/taqueria-mi-pueblo-denver",
+        "rating_img_url": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png",
+        "review_count": 36, "name": "Taqueria Mi Pueblo", "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/R_9oh0Ri02Ipt_GSIK4IvA/ms.jpg",
+        "rating": 3.5, "url": "http://www.yelp.com/biz/taqueria-mi-pueblo-denver",
+        "location": {"city": "Denver", "display_address": ["2945 W 23rd Ave", "Northwest",
+        "Denver, CO 80211"], "geo_accuracy": 8.0, "neighborhoods": ["Northwest"],
+        "postal_code": "80211", "country_code": "US", "address": ["2945 W 23rd Ave"],
+        "coordinate": {"latitude": 39.7512522339821, "longitude": -105.024393126369},
+        "state_code": "CO"}, "phone": "3034805332", "snippet_text": "So I have seen
+        this place at least a dozen times going to the Bronco''s games.  My Bro-in-Law
+        and I came here on Sunday before the game for a quick bite so...", "image_url":
+        "http://s3-media3.fl.yelpcdn.com/bphoto/x5av2vNMY1gCVeQ-PmDmug/ms.jpg", "categories":
+        [["Mexican", "mexican"]], "display_phone": "+1-303-480-5332", "rating_img_url_large":
+        "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
+        "id": "taqueria-mi-pueblo-denver", "is_closed": false, "rating_img_url_small":
+        "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/2e909d5d3536/ico/stars/v1/stars_small_3_half.png"},
+        {"is_claimed": true, "distance": 2572.759231355213, "mobile_url": "http://m.yelp.com/biz/las-margs-denver",
+        "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+        "review_count": 129, "name": "Las Margs", "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/ddjIMLv9ERVaa1_fOf7XMw/ms.jpg",
+        "rating": 4.5, "url": "http://www.yelp.com/biz/las-margs-denver", "location":
+        {"city": "Denver", "display_address": ["1521 Marion St", "Northeast", "Denver,
+        CO 80218"], "geo_accuracy": 8.0, "neighborhoods": ["Northeast"], "postal_code":
+        "80218", "country_code": "US", "address": ["1521 Marion St"], "coordinate":
+        {"latitude": 39.740512, "longitude": -104.972496}, "state_code": "CO"}, "phone":
+        "7203612137", "snippet_text": "This place has a great happy hour! Come here
+        quite a bit because it''s so close to my house. One of the owners, Zach, is
+        super friendly and makes you want to...", "image_url": "http://s3-media4.fl.yelpcdn.com/bphoto/pD7dZJxGzMsh1RD2vjIPZg/ms.jpg",
+        "categories": [["Bars", "bars"], ["Mexican", "mexican"], ["Breakfast \u0026
+        Brunch", "breakfast_brunch"]], "display_phone": "+1-720-361-2137", "rating_img_url_large":
+        "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+        "id": "las-margs-denver", "is_closed": false, "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png"},
+        {"is_claimed": true, "distance": 2100.4521417321334, "mobile_url": "http://m.yelp.com/biz/araujos-restaurant-denver",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 54, "name": "Araujo''s Restaurant", "snippet_image_url": "http://s3-media4.fl.yelpcdn.com/photo/ly67K22n4k2rfYaK1smoSw/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/araujos-restaurant-denver",
+        "location": {"city": "Denver", "display_address": ["2900 W 26th Ave", "Northwest",
+        "Denver, CO 80211"], "geo_accuracy": 8.0, "neighborhoods": ["Northwest", "Jefferson
+        Park"], "postal_code": "80211", "country_code": "US", "address": ["2900 W
+        26th Ave"], "coordinate": {"latitude": 39.754638671875, "longitude": -105.023803710938},
+        "state_code": "CO"}, "phone": "3034553866", "snippet_text": "Best breakfast
+        burritos in Denver!! I''ve tried many. Was able to get an order of 22 by calling
+        in 20 minutes before and they were incredibly helpful with...", "image_url":
+        "http://s3-media2.fl.yelpcdn.com/bphoto/weRLBkHKHH4ayS7uMmWguQ/ms.jpg", "categories":
+        [["Mexican", "mexican"]], "display_phone": "+1-303-455-3866", "rating_img_url_large":
+        "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "id": "araujos-restaurant-denver", "is_closed": false, "rating_img_url_small":
+        "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": true, "distance": 2119.0334888264993, "mobile_url": "http://m.yelp.com/biz/patzcuaros-denver",
+        "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 265, "name": "Patzcuaro''s", "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/E7lgvU0BhiTRKNXS7u0ucA/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/patzcuaros-denver", "location":
+        {"city": "Denver", "display_address": ["2616 W 32nd Ave", "Northwest", "Denver,
+        CO 80211"], "geo_accuracy": 8.0, "neighborhoods": ["Northwest", "Highland"],
+        "postal_code": "80211", "country_code": "US", "address": ["2616 W 32nd Ave"],
+        "coordinate": {"latitude": 39.761791229248, "longitude": -105.019432067871},
+        "state_code": "CO"}, "menu_date_updated": 1387572817, "phone": "3034554389",
+        "snippet_text": "It''s hard to top caldo that reminds you of home but Patzcuaros
+        may be the exception. Delicious Menudo served piping hot with pan, oregano,
+        onions, y chile!...", "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/Xoey7B2ZmjAijIT5jWH6yQ/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-303-455-4389",
+        "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "menu_provider": "single_platform", "id": "patzcuaros-denver", "is_closed":
+        false, "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": true, "distance": 3710.035963148225, "mobile_url": "http://m.yelp.com/biz/la-fuente-restaurant-denver",
+        "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+        "review_count": 98, "name": "La Fuente Restaurant", "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/Eh5ix7UJlwE_Qz6hAjzjYA/ms.jpg",
+        "rating": 4.5, "url": "http://www.yelp.com/biz/la-fuente-restaurant-denver",
+        "location": {"city": "Denver", "display_address": ["3023 W 44th Ave", "Northwest",
+        "Denver, CO 80211"], "geo_accuracy": 8.0, "neighborhoods": ["Northwest"],
+        "postal_code": "80211", "country_code": "US", "address": ["3023 W 44th Ave"],
+        "coordinate": {"latitude": 39.7766882926226, "longitude": -105.026046708226},
+        "state_code": "CO"}, "phone": "3034775501", "snippet_text": "Just met with
+        a client here and the food was incredible... Ordered the steak breakfast burrito
+        a la Mexicana which is with peppers and onions. When the...", "image_url":
+        "http://s3-media4.fl.yelpcdn.com/bphoto/vm-qKgZwgD4xV5Z6-WG3Pg/ms.jpg", "categories":
+        [["Mexican", "mexican"], ["American (Traditional)", "tradamerican"]], "display_phone":
+        "+1-303-477-5501", "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+        "id": "la-fuente-restaurant-denver", "is_closed": false, "rating_img_url_small":
+        "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png"}]}'
+    http_version: 
+  recorded_at: Wed, 24 Jun 2015 17:11:34 GMT
+recorded_with: VCR 2.9.3
