@@ -1,10 +1,6 @@
 require "rails_helper"
 require "helpers"
 
-RSpec.configure do |c|
-  c.include Helpers
-end
-
 RSpec.describe "user tries to login" do
   it "can see the homepage" do
       visit root_path
