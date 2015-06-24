@@ -4,16 +4,33 @@ $(document).ready(function(){
   var changeLat = 0;
   var changeLon = 0;
   var myBurritos = [];
-  all = document.getElementById('filter-all');
-  one_mile = document.getElementById('filter-one-mile');
-  three_mile = document.getElementById('filter-three-mile');
-  five_mile = document.getElementById('filter-five-mile');
+
 
   // Setup modules
   var geolocate = document.getElementById('geolocate'),
       map       = L.mapbox.map('map', 'tleskin.mf90jh31'),
       start     = [ 39.749964, -105.000012 ],
       myLayer   = L.mapbox.featureLayer().addTo(map);
+
+      // var all = document.getElementById('filter-all');
+      // var one_mile = document.getElementById('filter-one-mile');
+      // var three_mile = document.getElementById('filter-three-mile');
+      // var five_mile = document.getElementById('filter-five-mile');
+
+
+      two = document.getElementById('filter-two'),
+      food = document.getElementById('filter-food'),
+      five = document.getElementById('filter-five'),
+      all = document.getElementById('filter-all');
+
+
+
+
+
+
+
+
+
 
   // Set starting marker
   var marker = L.marker(start, {
@@ -114,9 +131,10 @@ $(document).ready(function(){
                "<p>" + burrito.table.address + "</p>" +
                "<p>" + burrito.table.city + ", " + burrito.table.state + " " +
                burrito.table.zip + "</p>"+
+               "<p>" + burrito.table.distance + " miles </p>" +
                "<p><a href=" + burrito.table.url + " target='_blank'>Visit on Yelp!</a></p>" +
                "<button class='burrito-button' name='fav'>Add To Favorites!</button>" +
-               "<p> ----------------------------------</p></div>");
+               "<p> -----------------------------</p></div>");
               }));
 
               $(".burrito-button").click(function(){
@@ -148,50 +166,93 @@ $(document).ready(function(){
     geolocate.innerHTML = 'Position could not be found';
   });
 
+  // all.onclick = function() {
+  // food.className = '';
+  // this.className = 'active';
+  // map.featureLayer.setFilter(function(f) {
+  //     // Returning true for all markers shows everything.
+  //     return true;
+  // });
+  // return false;
+  // };
+  //
+  // one_mile.onclick = function(e) {
+  // all.className = '';
+  // this.className = 'active';
+  // // The setFilter function takes a GeoJSON feature object
+  // // and returns true to show it or false to hide it.
+  // map.featureLayer.setFilter(function(f) {
+  //
+  //     return (f.properties['distance'] <= 1);
+  // });
+  // return false;
+  // };
+  //
+  // three_mile.onclick = function(e) {
+  // all.className = '';
+  // this.className = 'active';
+  // // The setFilter function takes a GeoJSON feature object
+  // // and returns true to show it or false to hide it.
+  // map.featureLayer.setFilter(function(f) {
+  //
+  //     return ((f.properties['distance'] > 1) && ( f.properties['distance'] <= 3 ));
+  // });
+  // return false;
+  // };
+  //
+  // five_mile.onclick = function(e) {
+  // all.className = '';
+  // this.className = 'active';
+  // // The setFilter function takes a GeoJSON feature object
+  // // and returns true to show it or false to hide it.
+  // map.featureLayer.setFilter(function(f) {
+  //
+  //     return ((f.properties['distance'] > 3) && (f.properties['distance'] <= 5));
+  // });
+  // return false;
+  // };
+
+  two.onclick = function(e) {
+      all.className = '';
+      this.className = 'active';
+      // The setFilter function takes a GeoJSON feature object
+      // and returns true to show it or false to hide it.
+      map.featureLayer.setFilter(function(f) {
+          return f.properties['distance'] < 1;
+      });
+      return false;
+  };
+
+  food.onclick = function(e) {
+      all.className = '';
+      this.className = 'active';
+      // The setFilter function takes a GeoJSON feature object
+      // and returns true to show it or false to hide it.
+      map.featureLayer.setFilter(function(f) {
+          return f.properties['distance'] < 3;
+      });
+      return false;
+  };
+
+  five.onclick = function(e) {
+      all.className = '';
+      this.className = 'active';
+      // The setFilter function takes a GeoJSON feature object
+      // and returns true to show it or false to hide it.
+      map.featureLayer.setFilter(function(f) {
+          return f.properties['distance'] < 5;
+      });
+      return false;
+  };
+
   all.onclick = function() {
-  food.className = '';
-  this.className = 'active';
-  map.featureLayer.setFilter(function(f) {
-      // Returning true for all markers shows everything.
-      return true;
-  });
-  return false;
-  };
-
-  one_mile.onclick = function(e) {
-  all.className = '';
-  this.className = 'active';
-  // The setFilter function takes a GeoJSON feature object
-  // and returns true to show it or false to hide it.
-  map.featureLayer.setFilter(function(f) {
-
-      return (f.properties['distance'] <= 1);
-  });
-  return false;
-  };
-
-  three_mile.onclick = function(e) {
-  all.className = '';
-  this.className = 'active';
-  // The setFilter function takes a GeoJSON feature object
-  // and returns true to show it or false to hide it.
-  map.featureLayer.setFilter(function(f) {
-
-      return ((f.properties['distance'] > 1) && ( f.properties['distance'] <= 3 ));
-  });
-  return false;
-  };
-
-  five_mile.onclick = function(e) {
-  all.className = '';
-  this.className = 'active';
-  // The setFilter function takes a GeoJSON feature object
-  // and returns true to show it or false to hide it.
-  map.featureLayer.setFilter(function(f) {
-
-      return ((f.properties['distance'] > 3) && (f.properties['distance'] <= 5));
-  });
-  return false;
+      food.className = '';
+      this.className = 'active';
+      map.featureLayer.setFilter(function(f) {
+          // Returning true for all markers shows everything.
+          return true;
+      });
+      return false;
   };
 
 

@@ -9,4 +9,7 @@ class MapsController < ApplicationController
     @burritos = YelpService.new.burritos(lat, lon)
     respond_with @burritos, status: 201, location: maps_path
   end
+
+  def about
+  end
 end
