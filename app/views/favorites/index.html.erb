@@ -10,7 +10,7 @@
     <p><%= favorite.address %></p>
     <p><%= favorite.city %>, <%= favorite.state %> <%= favorite.zip %></p>
     <p><%= link_to "Visit on Yelp!", "#{ favorite.url}" %></p>
-    <p><%= button_to "Remove From Favorites", favorite_path(id: favorite.id), class:"button radius", method: :delete %></p>
+    <p><%= button_to "Remove From Favorites", favorite_path(id: favorite.id), class:"btn btn-primary", method: :delete %></p>
   </div>
   <% end %>
 </div>

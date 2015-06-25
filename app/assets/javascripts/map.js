@@ -111,14 +111,14 @@ $(document).ready(function(){
                return $(
                  "<div='invisible'><p class='hidden'>" + burrito.table.id +
                  " </p><p><strong><h4>" + burrito.table.name + "</h4></strong></p>" +
-                "<p><img src=" + burrito.table.rating_large + "></p>"+
-               "<p>" + burrito.table.address + "</p>" +
-               "<p>" + burrito.table.city + ", " + burrito.table.state + " " +
-               burrito.table.zip + "</p>"+
-               "<p>" + burrito.table.distance + " miles </p>" +
-               "<p><a href=" + burrito.table.url + " target='_blank'>Visit on Yelp!</a></p>" +
-               "<button class='burrito-button' name='fav'>Add To Favorites!</button>" +
-               "<p> -----------------------------</p></div>");
+                 "<p><img src=" + burrito.table.rating_large + "></p>"+
+                 "<p>" + burrito.table.address + "</p>" +
+                 "<p>" + burrito.table.city + ", " + burrito.table.state + " " +
+                 burrito.table.zip + "</p>"+
+                 "<p>" + burrito.table.distance + " miles </p>" +
+                 "<p><a href=" + burrito.table.url + " target='_blank'>Visit on Yelp!</a></p>" +
+                 "<button class='burrito-button' name='fav'>Add To Favorites!</button>" +
+                 "<p> -----------------------------</p></div>");
               }));
 
               $(".burrito-button").click(function(){

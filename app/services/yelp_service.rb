@@ -12,7 +12,7 @@ class YelpService
       yb.url = business.mobile_url
       yb.rating_large = business.rating_img_url_large
       yb.rating_small = business.rating_img_url_small
-      yb.distance = business.distance / 1000
+      yb.distance = (business.distance / 1000).round(2)
       yb.address = business.location.address
       yb.city = business.location.city
       yb.state = business.location.state_code
