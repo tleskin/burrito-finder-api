@@ -52,7 +52,6 @@ $(document).ready(function(){
   // Once we've got a position, zoom and center the map
   // on it, and add a single marker.
   map.on('locationfound', function(e) {
-      // map.fitBounds(e.bounds);
 
       myLayer.setGeoJSON({
           type: 'Feature',
@@ -97,11 +96,10 @@ $(document).ready(function(){
 
           });
 
-
              var burritoLayer = map.featureLayer.setGeoJSON(myBurritos);
 
-             //map.fitBounds(burritoLayer.getBounds());
              map.setView([changeLat, changeLon], 14)
+
              // Create Div For Burrito Layer
              var $burritoDiv = $("#burritos");
              $("#burritos").addClass("burritos")
@@ -164,6 +162,7 @@ $(document).ready(function(){
   food.onclick = function(e) {
       all.className = '';
       this.className = 'active';
+
       // The setFilter function takes a GeoJSON feature object
       // and returns true to show it or false to hide it.
       map.featureLayer.setFilter(function(f) {
@@ -175,6 +174,7 @@ $(document).ready(function(){
   five.onclick = function(e) {
       all.className = '';
       this.className = 'active';
+      
       // The setFilter function takes a GeoJSON feature object
       // and returns true to show it or false to hide it.
       map.featureLayer.setFilter(function(f) {

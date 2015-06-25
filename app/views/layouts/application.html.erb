@@ -13,15 +13,14 @@
   <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
 </head>
 <body>
-  <div ng-controller="MarkerController">
 
   <% flash.each do |type, message| %>
-      <div class="alert flash <%= type %>">
-        <%= message %>
-      </div>
-    <% end %>
+    <div class="alert flash <%= type %>">
+      <%= message %>
+    </div>
+  <% end %>
 
   <%= yield %>
-  </div>
+
 </body>
 </html>

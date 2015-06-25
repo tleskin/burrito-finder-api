@@ -58,5 +58,4 @@ RSpec.describe FavoritesController, type: :controller do
       end
     end
   end
-
 end

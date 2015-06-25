@@ -27,5 +27,4 @@ class YelpService
 end
 
 class YourBurritos < OpenStruct
-
 end

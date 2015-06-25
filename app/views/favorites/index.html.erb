@@ -1,16 +1,17 @@
 <%= render :partial => 'partials/navbar' %>
+
 <div class="favorites">
   <div class="favorite-burritos">
     <h2>Favorite Burritos</h1>
   </div>
 
   <% @favorites.each do |favorite|  %>
-  <div class="each-favorite-burrito">
-    <h4><%= favorite.name %></h4>
-    <p><%= favorite.address %></p>
-    <p><%= favorite.city %>, <%= favorite.state %> <%= favorite.zip %></p>
-    <p><%= link_to "Visit on Yelp!", "#{ favorite.url}" %></p>
-    <p><%= button_to "Remove From Favorites", favorite_path(id: favorite.id), class:"btn btn-primary", method: :delete %></p>
-  </div>
+    <div class="each-favorite-burrito">
+      <h4><%= favorite.name %></h4>
+      <p><%= favorite.address %></p>
+      <p><%= favorite.city %>, <%= favorite.state %> <%= favorite.zip %></p>
+      <p><%= link_to "Visit on Yelp!", "#{ favorite.url}" %></p>
+      <p><%= button_to "Remove From Favorites", favorite_path(id: favorite.id), class:"btn btn-primary", method: :delete %></p>
+    </div>
   <% end %>
 </div>

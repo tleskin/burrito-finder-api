@@ -33,5 +33,4 @@ RSpec.describe MapsController, type: :controller do
       end
     end
   end
-
 end
