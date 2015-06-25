@@ -1,5 +1,4 @@
 require "rails_helper"
-require "helpers"
 
 RSpec.feature "user visits map page and can add favorite" do
   scenario "can see favorites on favorites page" do

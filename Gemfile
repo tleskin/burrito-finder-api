@@ -17,12 +17,11 @@ gem 'yelp', require: 'yelp'
 gem 'responders'
 gem 'newrelic_rpm'
 gem "skylight"
-gem "teaspoon"
-gem "teaspoon-mocha"
-gem "phantomjs"
 gem 'webmock', group: :test
+gem 'rack-cors', require: 'rack/cors'
 
 group :development, :test do
+  gem "teaspoon-mocha"
   gem 'capybara'
   gem 'web-console', '~> 2.0'
   gem 'spring'
@@ -32,6 +31,13 @@ group :development, :test do
   gem 'simplecov'
   gem 'launchy'
   gem 'database_cleaner'
+  gem 'konacha'
+  gem 'emoji-rspec', git: "git@github.com:carhartl/emoji-rspec.git", branch: "rspec-3"
+end
+
+group :test do
+    gem 'poltergeist'
+    gem 'phantomjs', :require => 'phantomjs/poltergeist'
 end
 
 group :production do

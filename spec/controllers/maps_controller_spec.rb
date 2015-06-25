@@ -1,5 +1,4 @@
 require 'rails_helper'
-require "helpers"
 
 RSpec.describe MapsController, type: :controller do
 
@@ -13,7 +12,7 @@ RSpec.describe MapsController, type: :controller do
 
   describe "GET #index" do
     it "returns http success" do
-      get :index, nil, { user_id: @user.id}
+      get :index, nil, { user_id: @user.id }
       expect(response).to have_http_status(:success)
     end
   end

@@ -12,12 +12,6 @@ $(document).ready(function(){
       start     = [ 39.749964, -105.000012 ],
       myLayer   = L.mapbox.featureLayer().addTo(map);
 
-      // var all = document.getElementById('filter-all');
-      // var one_mile = document.getElementById('filter-one-mile');
-      // var three_mile = document.getElementById('filter-three-mile');
-      // var five_mile = document.getElementById('filter-five-mile');
-
-
       two = document.getElementById('filter-two'),
       food = document.getElementById('filter-food'),
       five = document.getElementById('filter-five'),
@@ -74,8 +68,7 @@ $(document).ready(function(){
           }
       });
 
-      //
-      $.post("/burritos", {lat: e.latitude, lon: e.longitude}).then(function(burritos){
+      burritoAjax(e.latitude, e.longitude).then(function(burritos){
 
         $("#spinner").toggleClass("hidden");
 
@@ -199,6 +192,8 @@ $(document).ready(function(){
       });
       return false;
   };
-
-
 });
+
+function burritoAjax(lat, lon){
+  return $.post("/burritos", {lat: lat, lon: lon})
+};
