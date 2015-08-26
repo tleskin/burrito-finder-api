@@ -3,7 +3,7 @@ class FavoritesController < ApplicationController
   respond_to :json
 
   def index
-    @favorites = Favorite.all
+    @favorites = current_user.favorites
   end
 
   def create
