@@ -27,7 +27,7 @@ class FavoritesController < ApplicationController
     if favorite.user_id == current_user.id
       favorite.destroy
     else
-    redirect_to favorites_path
+      redirect_to favorites_path
     end
   end
 end
