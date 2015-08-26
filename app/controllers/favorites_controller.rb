@@ -24,7 +24,10 @@ class FavoritesController < ApplicationController
 
   def destroy
     favorite = Favorite.find_by(id: params[:id])
-    favorite.destroy
+    if favorite.user_id == current_user.id
+      favorite.destroy
+    else
     redirect_to favorites_path
+    end
   end
 end
