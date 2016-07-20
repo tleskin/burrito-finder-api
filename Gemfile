@@ -32,7 +32,7 @@ group :development, :test do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'konacha'
-  gem 'emoji-rspec', git: "git@github.com:carhartl/emoji-rspec.git", branch: "rspec-3"
+  # gem 'emoji-rspec', git: "git@github.com:carhartl/emoji-rspec.git", branch: "rspec-3"
 end
 
 group :test do

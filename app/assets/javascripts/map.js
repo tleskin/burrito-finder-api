@@ -4,7 +4,7 @@ $(document).ready(function(){
   var changeLat = 0;
   var changeLon = 0;
   var myBurritos = [];
-
+  var user = false;
 
   // Setup modules
   var geolocate = document.getElementById('geolocate'),
@@ -103,6 +103,16 @@ $(document).ready(function(){
              // Create Div For Burrito Layer
              var $burritoDiv = $("#burritos");
              $("#burritos").addClass("burritos")
+
+             debugger;
+
+
+             var hide_user = false;
+             if (burrito.table.user == false) {
+               hide_user = "hide_favorite";
+             } else {
+               hide_user = "show_favorite"
+             }
              $burritoDiv.empty();
              $burritoDiv.append(burritos.map(function(burrito){
 
@@ -115,7 +125,7 @@ $(document).ready(function(){
                  burrito.table.zip + "</p>"+
                  "<p>" + burrito.table.distance + " miles </p>" +
                  "<p><a href=" + burrito.table.url + " target='_blank'>Visit on Yelp!</a></p>" +
-                 "<button class='burrito-button' name='fav'>Add To Favorites!</button>" +
+                 "<button class='burrito-button " + hide_user + "' name='fav'>Add To Favorites!</button>" +
                  "<p> -----------------------------</p></div>");
               }));
 
@@ -174,7 +184,7 @@ $(document).ready(function(){
   five.onclick = function(e) {
       all.className = '';
       this.className = 'active';
-      
+
       // The setFilter function takes a GeoJSON feature object
       // and returns true to show it or false to hide it.
       map.featureLayer.setFilter(function(f) {

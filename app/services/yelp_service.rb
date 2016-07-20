@@ -1,5 +1,5 @@
 class YelpService
-  def burritos(lat, lon)
+  def burritos(lat, lon, user)
     params = { term: 'burrito' }
     coordinates = { latitude: lat, longitude: lon }
     businesses = Yelp.client.search_by_coordinates(coordinates, params).businesses
@@ -20,6 +20,7 @@ class YelpService
       yb.zip = business.location.postal_code
       yb.latitude = business.location.coordinate.latitude
       yb.longitude = business.location.coordinate.longitude
+      yb.user = user
       index += 1
       yb
     end

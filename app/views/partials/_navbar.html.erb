@@ -19,6 +19,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Exit", root_path %></li>     
+        <% if current_user%>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Signed in as <%= current_user.name  %> <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -26,6 +28,7 @@
             <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
           </ul>
         </li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
