@@ -90,6 +90,9 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.3)
     jwt (1.5.0)
+    keen (0.9.5)
+      addressable (~> 2.3.5)
+      multi_json (~> 1.3)
     kgio (2.9.3)
     konacha (3.5.1)
       actionpack (>= 3.1, < 5)
@@ -267,6 +270,7 @@ DEPENDENCIES
   figaro
   jbuilder (~> 2.0)
   jquery-rails
+  keen
   konacha
   launchy
   newrelic_rpm
@@ -295,4 +299,4 @@ DEPENDENCIES
   yelp
 
 BUNDLED WITH
-   1.11.2
+   1.12.5

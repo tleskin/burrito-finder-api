@@ -19,6 +19,7 @@ gem 'newrelic_rpm'
 gem "skylight"
 gem 'webmock', group: :test
 gem 'rack-cors', require: 'rack/cors'
+gem 'keen'
 
 group :development, :test do
   gem "teaspoon-mocha"

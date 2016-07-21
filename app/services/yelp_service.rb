@@ -4,6 +4,14 @@ class YelpService
     coordinates = { latitude: lat, longitude: lon }
     businesses = Yelp.client.search_by_coordinates(coordinates, params).businesses
     index = 0
+    city = Yelp.client.search_by_coordinates(coordinates, params).businesses.first.location.city
+    state = Yelp.client.search_by_coordinates(coordinates, params).businesses.first.location.state_code
+    Keen.publish(:usage, {
+      :user? => user,
+      :city => city,
+      :state => state
+    })
+    
     businesses.map do |business|
       yb = YourBurritos.new
       yb.id = index
