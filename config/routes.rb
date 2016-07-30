@@ -9,4 +9,10 @@ Rails.application.routes.draw do
   get '/about', to: 'maps#about'
 
   post '/burritos', to: 'maps#find_burritos'
+
+  namespace :api do
+    namespace :v1 do
+      resources :burritos, only: [:index]
+    end
+  end
 end

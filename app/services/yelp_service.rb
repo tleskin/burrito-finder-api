@@ -1,16 +1,9 @@
 class YelpService
-  def burritos(lat, lon, user)
+  def burritos(lat, lon)
     params = { term: 'burrito' }
     coordinates = { latitude: lat, longitude: lon }
     businesses = Yelp.client.search_by_coordinates(coordinates, params).businesses
     index = 0
-    city = Yelp.client.search_by_coordinates(coordinates, params).businesses.first.location.city
-    state = Yelp.client.search_by_coordinates(coordinates, params).businesses.first.location.state_code
-    Keen.publish(:usage, {
-      :user? => user,
-      :city => city,
-      :state => state
-    })
     
     businesses.map do |business|
       yb = YourBurritos.new
@@ -28,7 +21,6 @@ class YelpService
       yb.zip = business.location.postal_code
       yb.latitude = business.location.coordinate.latitude
       yb.longitude = business.location.coordinate.longitude
-      yb.user = user
       index += 1
       yb
     end
