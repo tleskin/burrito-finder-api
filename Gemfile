@@ -10,8 +10,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'unicorn'
 gem 'bootstrap-sass'
-gem 'omniauth'
-gem 'omniauth-facebook'
 gem 'figaro'
 gem 'yelp', require: 'yelp'
 gem 'responders'
@@ -20,6 +18,7 @@ gem "skylight"
 gem 'webmock', group: :test
 gem 'rack-cors', require: 'rack/cors'
 gem 'keen'
+gem 'rails-api'
 
 group :development, :test do
   gem "teaspoon-mocha"
